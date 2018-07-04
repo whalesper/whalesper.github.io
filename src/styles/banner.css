@@ -1,0 +1,77 @@
+.Banner-container {
+  position: fixed;
+  right:0px;
+  bottom: 0px;
+  margin-right: 70px;
+  margin-bottom: 70px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
+  width: 700px;
+  height: 120px;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  z-index: 999;
+}
+
+.Left-container {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.Logo-container {
+  width: 88px;
+  height: 88px;
+  background: #FF952B;
+  box-shadow: 0px 0px 10px rgba(222,120,19,0.36);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Text-container {
+  margin-left: 20px;
+}
+
+.Title-primary {
+  font-size: 48px;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.Title-secondary {
+  font-size: 16px;
+  text-align: left;
+  color: #aaa
+}
+
+.Logo {
+  /* width: 88px;
+  height: 88px; */
+  display: flex;
+  flex:1;
+  height: 55px;
+  fill: white
+}
+
+.Download-button {
+  padding: 5px 30px;
+  background: #000;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.Download-button:hover {
+  background: #666666;
+  cursor: pointer;
+}
+
+.Download-button:active {
+  outline: none;
+  outline-color: none;
+}

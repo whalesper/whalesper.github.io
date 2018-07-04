@@ -1,0 +1,33 @@
+.Tab-container {
+  margin: 40px 0px 40px 0px;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+
+}
+
+.Selected-tab {
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+.Tabs {
+  display: flex;
+  flex-direction: row;
+  flex: 0.75;
+  justify-content: space-evenly
+}
+
+.Tab {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #aaa;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+
+.Tab:hover {
+  color: #666;
+}

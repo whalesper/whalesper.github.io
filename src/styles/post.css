@@ -1,0 +1,49 @@
+
+
+.Container {
+  border-top: 1px solid #eee;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.Title {
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.Meta-info {
+  display: flex;
+  flex-direction: row;
+  margin: 25px 0px 25px 0px;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.Date {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Author {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Separator {
+  background: #aaa;
+  width: 3px;
+  height: 3px;
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+}
+
+.Post-body {
+  text-align: left;
+  line-height: 30px;
+  font-size: 20px;
+}
