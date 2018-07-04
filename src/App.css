@@ -47,6 +47,35 @@ top: 0px;
   to { transform: rotate(360deg); }
 }
 
-/* @media (width<376px) {
+@media screen and (max-width: 800px) {
+  .App {
+    text-align: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
 
-} */
+
+  .App-content {
+    padding: 0px 20px 0px 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
+    height: auto;
+    background: #fff;
+    min-height: 1080px;
+    width:calc(100%-40px)
+  }
+
+  .App-slideshow {
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* right: 0px; */
+    /* top: 0px; */
+    
+    }
+}

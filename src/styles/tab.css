@@ -31,3 +31,23 @@
 .Tab:hover {
   color: #666;
 }
+
+@media screen and (max-width: 800px) {
+  .Tab-container {
+    margin: 20px 0px 20px 0px;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction:column-reverse;
+    justify-content: space-between
+  }
+
+  .Tabs {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 20px 0;
+    width: 100%;
+    justify-content: space-evenly
+  }
+}

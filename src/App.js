@@ -10,6 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Banner />
         <div className="App-content">
         <header className="App-header">
           <Tab />
@@ -22,7 +23,6 @@ class App extends Component {
         <div className="App-slideshow">
         <Slideshow />
         </div>
-        <Banner />
       </div>
     );
   }
