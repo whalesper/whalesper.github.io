@@ -7,6 +7,11 @@ import Disclaimer from './components/disclaimer';
 import Banner from './components/banner';
 
 class App extends Component {
+
+  componentDidMount() {
+    document.title='Whalesper'
+  }
+
   render() {
     return (
       <div className="App">
