@@ -1,8 +1,11 @@
 {
-  "main.css": "static/css/main.5496cd33.css",
-  "main.css.map": "static/css/main.5496cd33.css.map",
-  "main.js": "static/js/main.dca7daba.js",
-  "main.js.map": "static/js/main.dca7daba.js.map",
+  "main.css": "static/css/main.e83cc5a8.css",
+  "main.css.map": "static/css/main.e83cc5a8.css.map",
+  "main.js": "static/js/main.6b79f830.js",
+  "main.js.map": "static/js/main.6b79f830.js.map",
+  "static/media/about.md": "static/media/about.3c35e43c.md",
   "static/media/background.jpg": "static/media/background.64aa4354.jpg",
-  "static/media/iit@3x.svg": "static/media/iit@3x.f5cc751c.svg"
+  "static/media/iit-phone.png": "static/media/iit-phone.a28aaf29.png",
+  "static/media/whalesper-black.svg": "static/media/whalesper-black.aa0ce5d1.svg",
+  "static/media/whalesper-phone.png": "static/media/whalesper-phone.0b670763.png"
 }
