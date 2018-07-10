@@ -1,6 +1,6 @@
 .Tab-container {
   margin: 40px 0px 40px 0px;
-  max-width: 600px;
+  width: 61.8%;
   display: flex;
   align-items: center;
   justify-content: space-between
@@ -8,15 +8,27 @@
 }
 
 .Selected-tab {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: bolder;
+}
+
+.Top-logo-container {
+  font-size: 24px;
+  font-weight: bolder;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.Top-logo-container svg {
+  fill: black
 }
 
 .Tabs {
   display: flex;
   flex-direction: row;
-  flex: 0.75;
-  justify-content: space-evenly
+  /* flex: 0.5; */
+  /* justify-content: space-evenly */
 }
 
 .Tab {
@@ -25,11 +37,17 @@
   color: #aaa;
   cursor: pointer;
   transition: ease-in-out 0.5s;
+  margin-left: 20px;
 }
 
 
 .Tab:hover {
   color: #666;
+}
+
+.Logo {
+  height: 24px;
+  margin-right: 12px;
 }
 
 @media screen and (max-width: 800px) {
@@ -38,13 +56,13 @@
     max-width: 800px;
     display: flex;
     align-items: center;
-    flex-direction:column-reverse;
+    flex-direction:column;
     justify-content: space-between
   }
 
   .Tabs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex: 1;
     margin: 20px 0;
     width: 100%;

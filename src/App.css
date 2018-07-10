@@ -2,9 +2,12 @@
   text-align: center;
   display: flex;
   flex: 1;
-  flex-direction: row;
-  height: 100%;
+  flex-direction: column;
+  /* height: 100%; */
   z-index: -1;
+  /* background: url(./assets/background.jpg) no-repeat left top;
+  background-attachment: fixed;
+  background-size: 100%; */
 }
 
 .App-logo {
@@ -13,6 +16,10 @@
 }
 
 .App-header {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  justify-content: center;
 }
 
 .App-title {
@@ -24,11 +31,14 @@
 }
 
 .App-content {
-  padding: 0px 70px 0px 70px;
+  padding: 20px 0;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
-  height: 100%;
+  /* height: 100%; */
   background: #fff;
-  min-height: 1080px
+  /* padding: auto 20px; */
+  /* min-height: 1080px; */
+  /* margin: 48px auto; */
+  /* margin-top: 100%; */
 }
 
 .App-slideshow {
@@ -42,6 +52,25 @@ top: 0px;
 
 }
 
+.Image-overlay {
+  position: relative;
+  /* top: 0px; */
+  /* left: 0px; */
+  padding: 150px 0px;
+  max-width: 61.8%;
+  margin: auto
+
+}
+
+.Overlay-text {
+  font-size: 96px;
+  color: white;
+  text-align: left;
+  font-weight: bolder;
+  box-shadow: 0px 0px 10px rbga(0,0,0,0.16)
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -52,7 +81,7 @@ top: 0px;
     text-align: center;
     display: flex;
     flex: 1;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     width: 100%;
     height: auto;
     z-index: -1;
@@ -60,11 +89,11 @@ top: 0px;
 
 
   .App-content {
-    padding: 0px 20px 0px 20px;
+    padding: 20px 0;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
     height: auto;
     background: #fff;
-    min-height: 1080px;
+    /* min-height: 1080px; */
     width:calc(100%-40px)
   }
 
@@ -76,6 +105,25 @@ top: 0px;
     position: relative;
     /* right: 0px; */
     /* top: 0px; */
+    
+    }
+
+    .Overlay-text {
+      font-size: 48px;
+      color: white;
+      max-width: 100%;
+      text-align: center;
+      font-weight: bolder;
+      box-shadow: 0px 0px 10px rbga(0,0,0,0.16)
+    }
+
+    .Image-overlay {
+      position: relative;
+      /* top: 0px; */
+      /* left: 0px; */
+      padding: 150px 0px;
+      max-width: calc(100% - 40px);
+      margin: auto
     
     }
 }

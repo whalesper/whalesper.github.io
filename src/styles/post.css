@@ -2,8 +2,8 @@
 
 .Container {
   border-top: 1px solid #eee;
-  margin-bottom: 40px;
-  max-width: 600px;
+  margin: 40px auto 0px auto;
+  max-width: 61.8%;
 }
 
 .Title {

@@ -1,0 +1,48 @@
+.Slideshow-container {
+  height: 100%;
+  object-fit: cover;
+}
+
+.Background {
+  width: 100%;
+  /* height: auto; */
+  filter: brightness(0.8);
+  background-size: cover;
+  /* height: 100%; */
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .Slideshow-container {
+    min-width: 100%;
+    /* height: 50%; */
+    object-fit: cover;
+  }
+  
+  .Slideshow-background {
+    /* width: 100%; */
+    /* height: auto; */
+    filter: brightness(0.8);
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .Background {
+    /* width: 100%; */
+    height: 100%;
+    filter: brightness(0.8);
+    background-size: cover;
+    /* height: 100%; */
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+  
+}

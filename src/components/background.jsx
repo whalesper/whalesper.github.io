@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../styles/slideshow.css';
+import '../styles/background.css';
 
-class Slideshow extends Component {
+class Background extends Component {
 
   state = {
     selectedTab: 'Event',
@@ -39,16 +39,9 @@ class Slideshow extends Component {
 
   render() {
     return (
-      <div className="Slideshow-container">
-        <img className="Slideshow-background" src={require("../assets/background.jpg")} alt="bg" />
-        <div className="Image-overlay">
-            <div className="Overlay-text">
-              Let food find you before you find them
-            </div>
-          </div>
-      </div>
+        <img className="Background" src={this.props.src} alt="bg" />
     );
   }
 }
 
-export default Slideshow;
+export default Background;

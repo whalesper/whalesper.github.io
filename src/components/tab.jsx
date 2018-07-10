@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 import '../styles/tab.css';
+import logo from '../assets/whalesper-black.svg'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Tab extends Component {
 
   state = {
     selectedTab: 'Event',
-    tabs: ['Events', 'Products', 'Blog', 'About Us'],
+    tabs: [
+      {
+      title: 'Events', 
+      link: 'events'
+      }, {
+      title: 'Products', 
+      link: 'products'
+      }, {
+      title: 'Blog', 
+      link: 'blog'
+      }, {
+      title: 'About Us',
+      link: 'about'
+      }],
     displayTabs:[]
   }
 
@@ -17,8 +32,8 @@ class Tab extends Component {
     console.log(index)
     let displayTabs = this.state.tabs.slice();
     let selectedTab = this.state.displayTabs[index];
-    displayTabs.splice(displayTabs.indexOf(selectedTab), 1);
-    console.log(selectedTab, displayTabs)
+    // displayTabs.splice(displayTabs.indexOf(selectedTab), 1);
+    // console.log(selectedTab, displayTabs)
     this.setState({
       selectedTab: selectedTab,
       displayTabs: displayTabs
@@ -32,19 +47,19 @@ class Tab extends Component {
       let i = index;
       i++;
       index++;
-    return <div key={index} className="Tab" onClick={()=> this.selectTab(i)}>
-      {x}
-    </div>})}
+    return <Link to={x.link} key={index} className="Tab" onClick={()=> this.selectTab(i)}>
+      {x.title}
+    </Link>})}
   </div>
-
+ 
     
   }
 
   render() {
     return (
       <div className="Tab-container">
-        <div className="Selected-tab">
-          {this.state.selectedTab}
+        <div className="Top-logo-container">
+          <img className="Logo" src={logo} alt="Whalesper"/> Whalesper
         </div>
 
         {this._renderTabs()}
