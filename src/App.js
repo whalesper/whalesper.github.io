@@ -12,6 +12,7 @@ import Background from './components/background';
 import EventPage from './pages/events';
 import AboutPage from './pages/about';
 import ProductsPage from './pages/products';
+import WhalesperPage from './pages/whalesper';
 
 const Loading = () => <div>Loading...</div>;
 
@@ -40,7 +41,8 @@ class App extends Component {
             <Tab />
           </header>
             <Route exact path="/" component={EventPage} />
-            <Route path="/products" component={ProductsPage} />
+            <Route exact path="/products" component={ProductsPage} />
+            <Route exacr path="/products/whalesper" component={WhalesperPage} />
             <Route path="/events" component={EventPage} />
             <Route path="/about" component={AboutPage} />
         <Disclaimer />

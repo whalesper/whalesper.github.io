@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/tab.css';
 import logo from '../assets/whalesper-black.svg'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Tab extends Component {
 
@@ -47,9 +47,9 @@ class Tab extends Component {
       let i = index;
       i++;
       index++;
-    return <Link to={x.link} key={index} className="Tab" onClick={()=> this.selectTab(i)}>
+    return <NavLink activeClassName='active' to={x.link} key={index} className="Tab" onClick={()=> this.selectTab(i)}>
       {x.title}
-    </Link>})}
+    </NavLink>})}
   </div>
  
     
