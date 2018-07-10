@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/whalesper.css';
-import Post from "../components/post";
-import Background from "../components/background";
+import Post from "../components/post/post";
+import Background from "../components/background/background";
 import { Link } from "react-router-dom";
 
 class WhalesperPage extends Component {

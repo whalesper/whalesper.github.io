@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import '../styles/about.css';
-import Post from "../components/post";
-import Guy from "../components/guy";
-import Background from "../components/background";
-import ReactMarkdown from 'react-markdown';
-import about from '../mds/about/about.md';
+import './about.css';
+import Post from "../../components/post/post";
+import Guy from "../../components/guy/guy";
+import Background from "../../components/background/background";
 const fs = require('fs');
 
 class AboutPage extends Component {
   render() {
-    console.log(about)
     return <div>
       <Background 
-      src={require("../assets/background.jpg")} 
+      src={require("../../assets/background.jpg")} 
       />
       <div className="Image-overlay">
         <div className="Overlay-text Overlay-text-about">

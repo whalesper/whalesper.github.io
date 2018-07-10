@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../styles/banner.css';
-import logo from '../assets/iit@3x.svg';
+import './banner.css';
+import logo from '../../assets/iit@3x.svg';
 
 class Banner extends Component {
   render() {
@@ -8,7 +8,7 @@ class Banner extends Component {
       <div className="Banner-container">
         <div className="Left-container">
         <div className="Logo-container">
-          <img className="Logo" src={require('../assets/iit@3x.svg')} alt=""/>
+          <img className="Logo" src={require('../../assets/iit@3x.svg')} alt=""/>
         </div>
         <div className="Text-container">
           <div className="Title-primary">

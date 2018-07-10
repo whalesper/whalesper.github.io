@@ -1,17 +1,14 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import Loadable from 'react-loadable';
 import React, { Component } from 'react';
 import './App.css';
-import Post from './components/post';
-import Tab from './components/tab';
-// import Slideshow from './components/slideshow';
-import Disclaimer from './components/disclaimer';
-// import Banner from './components/banner';
+import Post from './components/post/post';
+import Tab from './components/tab/tab';
+import Disclaimer from './components/disclaimer/disclaimer';
 import mds from './mds/events/'
-import Background from './components/background';
-import EventPage from './pages/events';
-import AboutPage from './pages/about';
-import ProductsPage from './pages/products';
+import Background from './components/background/background';
+import EventPage from './pages/events/events';
+import AboutPage from './pages/about/about';
+import ProductsPage from './pages/products/products';
 import WhalesperPage from './pages/whalesper';
 
 const Loading = () => <div>Loading...</div>;

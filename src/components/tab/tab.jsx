@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../styles/tab.css';
-import logo from '../assets/whalesper-black.svg'
+import './tab.css';
+import logo from '../../assets/whalesper-black.svg'
 import { NavLink } from "react-router-dom";
 
 class Tab extends Component {

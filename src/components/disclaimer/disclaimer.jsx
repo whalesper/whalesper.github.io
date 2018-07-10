@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/disclaimer.css';
+import './disclaimer.css';
 
 class Disclaimer extends Component {
 
