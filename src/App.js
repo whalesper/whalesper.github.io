@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+
 import './App.css';
 import Post from './components/post/post';
 import Tab from './components/tab/tab';
@@ -26,24 +28,28 @@ const Loading = () => <div>Loading...</div>;
 class App extends Component {
   state = { mds: undefined }
   componentDidMount() {
-    document.title = 'Whalesper'
+    document.title = 'Whalesper';
+
+    ReactGA.initialize('UA-122173913-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
     this.setState({ mds: mds })
   }
 
   render() {
     return (
       <Router>
-      <div className="App">
+        <div className="App">
           <header className="App-header">
             <Tab />
           </header>
-            <Route exact path="/" component={EventPage} />
-            <Route exact path="/products" component={ProductsPage} />
-            <Route exacr path="/products/whalesper" component={WhalesperPage} />
-            <Route path="/events" component={EventPage} />
-            <Route path="/about" component={AboutPage} />
-        <Disclaimer />
-      </div>
+          <Route exact path="/" component={EventPage} />
+          <Route exact path="/products" component={ProductsPage} />
+          <Route exacr path="/products/whalesper" component={WhalesperPage} />
+          <Route path="/events" component={EventPage} />
+          <Route path="/about" component={AboutPage} />
+          <Disclaimer />
+        </div>
       </Router>
     );
   }
