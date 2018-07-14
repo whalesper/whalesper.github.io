@@ -178,11 +178,12 @@
 @media screen and (max-width: 800px) {
   .Carousel-image {
     height: 250px;
-    /* width: calc(100% - 40px); */
+    min-width: calc(100% - 40px);
     position: absolute;
     right: 20px;
     top: 180px;
     /* min-width: 20px; */
+    object-fit: contain;
   }
 
   .Carousel-head-wrapper {
