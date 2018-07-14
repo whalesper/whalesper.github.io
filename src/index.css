@@ -51,3 +51,40 @@ body {
 .Width-golden {
   width: 61.8%;
 }
+
+@media screen and (max-width: 800px) {
+  .Title-primary {
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  
+  .Title-secondary {
+    font-size: 19px;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  
+  .Body {
+    font-size: 19px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    font-weight: normal;
+  }
+  
+  .Text-bold {
+    font-weight: bold;
+  }
+  
+  .Opacity-50 {
+    opacity: 0.5;
+  }
+  
+  .Text-white {
+    color: white;
+  }
+  
+  .Width-golden {
+    width: calc(100% - 40px);
+  }
+}

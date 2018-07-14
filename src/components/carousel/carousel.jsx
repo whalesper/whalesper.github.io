@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import { Transition, animated, Spring, Parallax } from 'react-spring';
+import {
+  // BrowserView,
+  // MobileView,
+  // isBrowser,
+  isMobile
+} from "react-device-detect";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import downloadFromApple from '../../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg'
 import downloadFromGoogle from '../../assets/google-play-badge.png'
@@ -23,7 +29,7 @@ class Carousel extends Component {
     data: [
       {
         index: 0,
-        img: require('../../assets/whalesper-header.png'),
+        img: 'whalesper-header',
         title: 'Whalesper',
         goTo: '/products/whalesper',
         detailsTitle: 'Meet Whalesper, our first App',
@@ -32,7 +38,7 @@ class Carousel extends Component {
       },
       {
         index: 1,
-        img: require('../../assets/whalesper-phone.png'),
+        img: 'iit-header',
         title: 'iit',
         goTo: '/products/whalesper',
         detailsTitle: 'Let food find you before you find them',
@@ -60,12 +66,19 @@ class Carousel extends Component {
   }
 
   clearInterval() {
+    // console.log('clear interval')
     clearInterval(this.interval);
 
   }
 
   componentDidMount() {
-    this.goTo();
+    if (isMobile) {
+      this.goTo();
+    }
+  }
+
+  componentWillUnmount() {
+    this.clearInterval()
   }
 
   _renderIndicator(data) {
@@ -74,49 +87,31 @@ class Carousel extends Component {
   }
 
   _renderIndicators() {
-    return <div className="Carousel-indicators">
+    if (!isMobile) {
+      return <div className="Carousel-indicators">
       {this.state.data.map(x => this._renderIndicator(x))}
-    </div>
+    </div>} else return null;
   }
 
-  _renderDownloadLinks() {
-    const data = this.state.data[this.state.currentIndex];
+  _renderDownloadLinks(data) {
+    // const data = this.state.data[this.state.currentIndex];
     return <div className="Carousel-head-text-download-wrapper">
       {data.downloadIOS ? <a href={data.downloadIOS} target="_blank"><img src={downloadFromApple} className="Carousel-head-text-download" /></a> : downloadIOSAlt}
       {data.downloadAndroid ? <a href={data.downloadAndroid} target="_blank"><img src={downloadFromGoogle} className="Carousel-head-text-download" /></a> : downloadAndroidAlt}
     </div>
   }
 
+  isMobile() {
+    return isMobile;
+  }
+
   _renderDetails(data) {
-    let offset = data.index;
+    // let speed = data.index <= this.state.currentIndex ? 0.5 : 2;
+    const speed = 1
+    const offset = data.index;
     return <React.Fragment key={offset}>
-      <Parallax.Layer offset={offset} speed={0.3}>
-        <div className="Carousel-head-wrapper">
-          <div className="Carousel-head">
-            <div className="Carousel-head-text">
-
-              <div className="Carousel-head-title">
-
-                <div className="Title-primary Text-white">
-                  {data.title}
-                </div>
-                <div className="Body Text-bold Text-white Opacity-50">
-                  Learn More >
-              </div>
-              </div>
-              {this._renderDownloadLinks()}
-            </div>
-          </div>
-        </div>
-      </Parallax.Layer>
-      {/* <div className="Carousel-image"> */}
-      <Parallax.Layer offset={offset} speed={0.2}>
-        <img className="Carousel-image" src={data.img} alt="" />
-      </Parallax.Layer>
-      {/* </div> */}
-      {/* </div> */}
-      <Parallax.Layer offset={offset} speed={0}>
-        <div className="Carousel-body">
+          <Parallax.Layer offset={offset} speed={0 * speed}>
+        <div className="Carousel-body Width-golden">
           <div className="Title-secondary">
             {data.detailsTitle}
           </div>
@@ -125,7 +120,31 @@ class Carousel extends Component {
           </div>
           <div className="Body Text-bold Link">Learn More ></div>
         </div>
-      </Parallax.Layer></React.Fragment>
+      </Parallax.Layer>
+    <Parallax.Layer offset={offset} speed={2 * speed}>
+        <img className="Carousel-image" src={require(`../../assets/${data.img + (this.isMobile() ? '@1x.png' : '@2x.png')}`)} alt="" />
+      </Parallax.Layer>
+      <Parallax.Layer offset={offset} speed={0.5 * speed}>
+        <div className="Carousel-head-wrapper Width-golden">
+          <div className="Carousel-head">
+            <div className="Carousel-head-text">
+              <div className="Carousel-head-title">
+                <div className="Title-primary Text-white">
+                  {data.title}
+                </div>
+                <div className="Body Text-bold Text-white Opacity-50">
+                  Learn More >
+              </div>
+              </div>
+              {this._renderDownloadLinks(data)}
+            </div>
+          </div>
+        </div>
+      </Parallax.Layer>
+      {/* <div className="Carousel-image"> */}
+      {/* </div> */}
+      {/* </div> */}
+</React.Fragment>
   }
 
   scroll(to) {
@@ -134,7 +153,7 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className="Carousel-container">
+      <div className="Carousel-container" onScroll={() => this.clearInterval()}      >
         <div className="Carousel-gallery">
           {this._renderIndicators()}
           <div className="Carousel-arrows">
@@ -148,7 +167,7 @@ class Carousel extends Component {
         </div>
         <div className="Carousel-details-background">
           <div className="Carousel-details" onMouseEnter={() => this.clearInterval()} onMouseLeave={() => this.setInterval()}>
-            <Parallax ref="parallax" pages={this.state.data.length} horizontal scrolling={false}>
+            <Parallax ref="parallax" pages={this.state.data.length} horizontal scrolling={isMobile}>
               {this.state.data.map(data => this._renderDetails(data))}
             </Parallax>
           </div>
