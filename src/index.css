@@ -8,3 +8,46 @@ body {
 * {
   text-decoration: none;
 }
+
+.Link {
+  color: #2796D0;
+}
+
+.Link:hover {
+  cursor: pointer;
+}
+
+.Title-primary {
+  font-size: 56px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.Title-secondary {
+  font-size: 27px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.Body {
+  font-size: 21px;
+  line-height: 30px;
+  margin-bottom: 24px;
+  font-weight: normal;
+}
+
+.Text-bold {
+  font-weight: bold;
+}
+
+.Opacity-50 {
+  opacity: 0.5;
+}
+
+.Text-white {
+  color: white;
+}
+
+.Width-golden {
+  width: 61.8%;
+}

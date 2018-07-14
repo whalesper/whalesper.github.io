@@ -8,7 +8,7 @@ const fs = require('fs');
 class AboutPage extends Component {
   render() {
     return <div>
-      <Background 
+      <Background
       src={require("../../assets/background.jpg")} 
       />
       <div className="Image-overlay">

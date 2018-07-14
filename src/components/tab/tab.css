@@ -1,9 +1,10 @@
 .Tab-container {
-  margin: 40px 0px 40px 0px;
+  margin: 40px auto;
   width: 61.8%;
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+  /* margin: auto; */
 
 }
 
@@ -18,6 +19,14 @@
   flex-direction: row;
   display: flex;
   align-items: center;
+}
+
+.Top-logo-container:active {
+  color: #666;
+}
+
+.Top-logo-container:visited {
+  color: initial;
 }
 
 .Top-logo-container svg {
@@ -40,6 +49,16 @@
   margin-left: 20px;
 }
 
+.Tab:active {
+  font-size: 24px;
+  font-weight: bolder;
+  color: red;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  margin-left: 20px;
+}
+
+
 
 .Tab:hover {
   color: #666;
@@ -56,7 +75,7 @@
     max-width: 800px;
     display: flex;
     align-items: center;
-    flex-direction:column;
+    flex-direction:row;
     justify-content: space-between
   }
 
@@ -65,7 +84,7 @@
     flex-direction: column;
     flex: 1;
     margin: 20px 0;
-    width: 100%;
+    /* width: 100%; */
     justify-content: space-evenly
   }
 }

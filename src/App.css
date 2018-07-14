@@ -16,10 +16,10 @@
 }
 
 .App-header {
-  display: flex;
-  flex-direction: row;
+  /* display: flex; */
+  /* flex-direction: row; */
   background: #fff;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .App-title {

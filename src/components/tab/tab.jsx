@@ -9,15 +9,15 @@ class Tab extends Component {
     selectedTab: 'Event',
     tabs: [
       {
+        title: 'Home', 
+        link: '/'
+      }, {
       title: 'Events', 
       link: 'events'
       }, {
       title: 'Products', 
       link: 'products'
-      }, {
-      title: 'Blog', 
-      link: 'blog'
-      }, {
+      },{
       title: 'About Us',
       link: 'about'
       }],
@@ -58,9 +58,9 @@ class Tab extends Component {
   render() {
     return (
       <div className="Tab-container">
-        <div className="Top-logo-container">
+        <NavLink className="Top-logo-container" to="/">
           <img className="Logo" src={logo} alt="Whalesper"/> Whalesper
-        </div>
+        </NavLink>
 
         {this._renderTabs()}
       </div>
