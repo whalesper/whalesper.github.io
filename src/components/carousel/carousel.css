@@ -114,7 +114,8 @@
 .Carousel-head-text-download-alt {
   color: white;
   font-size: 16px;
-  padding: 5px 10px;
+  line-height: 16px;
+  padding: 6.5px 10px;
   border: 1px solid white;
   margin-left: 10px;
   background: rgba(255,255,255,0.16);
@@ -126,6 +127,7 @@
 .Carousel-head-text-download-alt-small {
   color: white;
   font-size: 9px;
+  line-height: 9px;
   font-weight: normal;
 }
 
