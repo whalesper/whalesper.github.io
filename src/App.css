@@ -19,7 +19,9 @@
   /* display: flex; */
   /* flex-direction: row; */
   background: #fff;
-  /* justify-content: center; */
+  height: auto;
+  -webkit-transition: height 2s; /* For Safari 3.1 to 6.0 */
+  transition: height 2s;  /* justify-content: center; */
 }
 
 .App-title {

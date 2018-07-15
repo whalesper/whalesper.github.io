@@ -9,7 +9,6 @@
 }
 
 .Selected-tab {
-  font-size: 24px;
   font-weight: bolder;
 }
 
@@ -41,21 +40,21 @@
 }
 
 .Tab {
-  font-size: 24px;
-  font-weight: bolder;
+  /* font-size: 24px; */
+  font-weight: normal;
   color: #aaa;
   cursor: pointer;
   transition: ease-in-out 0.5s;
   margin-left: 20px;
 }
 
-.Tab:active {
-  font-size: 24px;
+.Tab.active {
+  /* font-size: 24px; */
   font-weight: bolder;
-  color: red;
+  /* color: black;
   cursor: pointer;
   transition: ease-in-out 0.5s;
-  margin-left: 20px;
+  margin-left: 20px; */
 }
 
 
@@ -69,22 +68,64 @@
   margin-right: 12px;
 }
 
+.Tab-chevron {
+  transition: ease-in-out 0.5s;
+}
+
+.Tab-chevron.Collapsed {
+  transform: rotate(180deg);
+
+}
+
 @media screen and (max-width: 800px) {
   .Tab-container {
-    margin: 20px 0px 20px 0px;
-    max-width: 800px;
+    margin: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: flex-start;
+    flex-direction:row;
+    justify-content: space-between;
+    transition: ease-in-out 0.2s, height 0.5s;
+    /* -webkit-transition: ease-in-out 0.2s;  */
+  }
+
+  .Top-logo-container {
+    font-size: 21px;
+    font-weight: bolder;
+    flex-direction: row;
     display: flex;
     align-items: center;
-    flex-direction:row;
-    justify-content: space-between
+  }
+
+  .Logo {
+    height: 21px;
+    margin-right: 12px;
   }
 
   .Tabs {
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin: 20px 0;
+    margin: 0;
     /* width: 100%; */
-    justify-content: space-evenly
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition: ease-in-out 0.2s, height 0.5s;
+  }
+
+  .Tab {
+    margin: 20px 0 0 0;
+    transition: ease-in-out 0.1s;
+  }
+
+  .Tab-toggle {
+    font-size: 21px;
+    font-weight: normal;
+    color: #aaa;
+    cursor: pointer;
+    /* transition: ease-in-out 0.5s; */
+    margin-left: 20px;
+    /* display: inline; */
+    /* display: flex; */
   }
 }

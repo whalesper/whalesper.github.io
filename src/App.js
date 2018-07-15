@@ -16,10 +16,12 @@ import WhalesperPage from './pages/whalesper';
 import HomePage from './pages/home/home';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faChevronLeft);
 library.add(faChevronRight);
+library.add(faChevronDown);
+library.add(faChevronUp);
 const Loading = () => <div>Loading...</div>;
 
 // const Events = Loadable({
