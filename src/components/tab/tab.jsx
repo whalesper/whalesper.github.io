@@ -38,7 +38,7 @@ class Tab extends Component {
     this.state = initialState;
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.setState({ displayTabs: this.state.tabs }, () => this.selectTab(0));
   }
 

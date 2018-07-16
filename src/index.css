@@ -34,6 +34,7 @@ body {
   line-height: 30px;
   margin-bottom: 24px;
   font-weight: normal;
+  color: #999
 }
 
 .Text-bold {
@@ -44,12 +45,36 @@ body {
   opacity: 0.5;
 }
 
+.Opacity-25 {
+  opacity: 0.25;
+}
+
+
 .Text-white {
   color: white;
 }
 
+.Text-left {
+  text-align: left;
+}
+
+.Text-center {
+  text-align: center;
+}
+
+.No-margin {
+  margin: 0;
+}
+
+
 .Width-golden {
   width: 61.8%;
+  /* margin:  auto; */
+}
+
+.Paragraph-container {
+  width: 61.8%;
+  margin:  auto;
 }
 
 @media screen and (max-width: 800px) {
@@ -75,6 +100,11 @@ body {
   .Text-bold {
     font-weight: bold;
   }
+
+  .Text-smaller {
+    font-size: 12px;
+    line-height: 16px;
+  }
   
   .Opacity-50 {
     opacity: 0.5;
@@ -87,4 +117,13 @@ body {
   .Width-golden {
     width: calc(100% - 40px);
   }
+
+  .Paragraph-container {
+    width: 100%;
+  }
+
+  .No-margin {
+    margin: 0;
+  }
+  
 }

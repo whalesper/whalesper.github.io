@@ -10,9 +10,9 @@ class EventPage extends Component {
         src={require('../../assets/background.jpg')}
       />
       <div className='Image-overlay'>
-        <div className='Overlay-text'>
+        <h1 className='Title-primary Text-white'>
           Let food find you before you find them
-        </div>
+        </h1>
       </div>
       <div className='App-content'>
         <div className='Guy-wrapper'>

@@ -5,9 +5,9 @@ class Post extends Component {
   render() {
     return (
       <div className="Container">
-        <div className="Title">
+        <h2 className="Title-secondary Text-left">
           Show me your food
-        </div>
+        </h2>
         <div className="Meta-info">
           <div className="Date">
             2018 / 07 / 17   

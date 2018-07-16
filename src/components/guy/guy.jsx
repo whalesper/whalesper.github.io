@@ -11,7 +11,7 @@ class Guy extends Component {
     const { name, title, email } = this.props;
     return (
       <div className="Guy-container">
-        <img className="Guy-photo" src='https://media.tenor.com/images/014aede7c324d769e4657ff3f8979504/tenor.png' />
+        <img className="Guy-photo" alt='profile' src='https://media.tenor.com/images/014aede7c324d769e4657ff3f8979504/tenor.png' />
         <div className="Guy-info">
           <div className="Guy-name">
             {name}

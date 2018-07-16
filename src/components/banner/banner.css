@@ -1,9 +1,8 @@
 .Banner-container {
-  position: fixed;
-  right:0px;
-  bottom: 0px;
-  margin-right: 70px;
-  margin-bottom: 70px;
+  /* position: fixed; */
+  /* right:0px;
+  bottom: 0px; */
+  margin: 50px auto;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
   width: 700px;
   height: 120px;
@@ -12,14 +11,15 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
-  z-index: 999;
+  padding: 20px 20px;
+  /* z-index: 999; */
 }
 
 .Left-container {
   flex-direction: row;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .Logo-container {
@@ -34,21 +34,22 @@
 
 .Text-container {
   margin-left: 20px;
+  text-align: left;
 }
 
-.Title-primary {
+/* .Title-primary {
   font-size: 48px;
   font-weight: bolder;
   text-align: left;
-}
+} */
 
-.Title-secondary {
+/* .Title-secondary {
   font-size: 16px;
   text-align: left;
   color: #aaa
-}
+} */
 
-.Logo {
+.App-download-logo {
   /* width: 88px;
   height: 88px; */
   display: flex;
@@ -58,7 +59,7 @@
 }
 
 .Download-button {
-  padding: 5px 30px;
+  padding: 10px 30px;
   background: #000;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
   color: white;
@@ -80,10 +81,6 @@
 @media screen and (max-width: 800px) {
   .Banner-container {
     position: relative;
-    right:0px;
-    bottom: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.16);
     width: calc(100% - 40px);
     height: 120px;
@@ -95,7 +92,7 @@
     padding: 0px 20px;
     z-index: 999;
   }
-
+/* 
   .Title-primary {
     font-size: 24px;
     font-weight: bolder;
@@ -106,7 +103,7 @@
     font-size: 12px;
     text-align: left;
     color: #aaa
-  }
+  } */
 
   .Download-button {
     padding: 5px 10px;
@@ -115,5 +112,24 @@
     color: white;
     font-weight: bold;
     font-size: 16px;
+  }
+
+  .App-download-logo {
+    /* width: 88px;
+    height: 88px; */
+    display: flex;
+    flex:1;
+    height: 36px;
+    fill: white
+  }
+
+  .Logo-container {
+    width: 55px;
+    height: 55px;
+    background: #FF952B;
+    box-shadow: 0px 0px 10px rgba(222,120,19,0.36);
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 }

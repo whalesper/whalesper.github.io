@@ -8,7 +8,7 @@ import Footer from './components/footer/footer';
 import EventPage from './pages/events/events';
 import AboutPage from './pages/about/about';
 import ProductsPage from './pages/products/products';
-import WhalesperPage from './pages/whalesper';
+import WhalesperPage from './pages/products/whalesper/whalesper';
 import HomePage from './pages/home/home';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
@@ -17,16 +17,6 @@ library.add(faChevronLeft);
 library.add(faChevronRight);
 library.add(faChevronDown);
 library.add(faChevronUp);
-
-// const Events = Loadable({
-//   loader: () => import('./pages/events'),
-//   loading: Loading,
-// });
-
-// const About = Loadable({
-//   loader: () => import('./pages/about'),
-//   loading: Loading,
-// });
 
 class App extends Component {
 

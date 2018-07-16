@@ -5,9 +5,9 @@ class Email extends Component {
 
   render() {
     return <div className="Email-container">
-      <div className="Title-secondary Text-white">
+      <h2 className="Title-secondary Text-white">
         Sign up for newsletter
-      </div>
+      </h2>
       <input className="Email-input" type="email" placeholder="Email Address"/>
     </div>;
   }

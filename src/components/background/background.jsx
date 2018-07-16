@@ -37,7 +37,7 @@ class Background extends Component {
 }
 
 Background.propTypes = {
-  src: PropTypes.object.Required
+  src: PropTypes.string.isRequired
 };
 
 export default Background;
