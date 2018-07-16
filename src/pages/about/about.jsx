@@ -10,9 +10,9 @@ class AboutPage extends Component {
         src={require('../../assets/background.jpg')}
       />
       <div className='Image-overlay'>
-        <div className='Overlay-text Overlay-text-about'>
+        <h1 className='Title-primary Text-white Text-center'>
           Team Whalesper
-        </div>
+        </h1>
       </div>
       <div className='App-content'>
         <div className='Guy-wrapper'>
