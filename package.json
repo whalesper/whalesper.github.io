@@ -1,5 +1,5 @@
 {
-  "name": "whalesper-website",
+  "name": "whalesper.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,6 +30,8 @@
     "deploy": "gh-pages -d build -b master"
   },
   "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-plugin-react": "^7.10.0",
     "gh-pages": "^1.2.0"
   },
   "homepage": "http://whalesper.co"

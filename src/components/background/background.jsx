@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './background.css';
 
 class Background extends Component {
-
-  state = {
-    selectedTab: 'Event',
-    tabs: ['Events', 'Products', 'Blog', 'About Us'],
-    displayTabs: []
-  }
-
-  componentWillMount() {
-    this.setState({ displayTabs: this.state.tabs }, () => this.selectTab(0));
-  }
 
   selectTab(index) {
     let displayTabs = this.state.tabs.slice();
@@ -20,7 +12,7 @@ class Background extends Component {
     this.setState({
       selectedTab: selectedTab,
       displayTabs: displayTabs
-    })
+    });
   }
 
   _renderTabs() {
@@ -30,18 +22,22 @@ class Background extends Component {
         index++;
         return <div key={index} className="Tab" onClick={() => this.selectTab(index)}>
           {x}
-        </div>
+        </div>;
       })}
-    </div>
+    </div>;
 
 
   }
 
   render() {
     return (
-        <img className="Background" src={this.props.src} alt="bg" />
+      <img className="Background" src={this.props.src} alt="bg" />
     );
   }
 }
+
+Background.propTypes = {
+  src: PropTypes.object.Required
+};
 
 export default Background;

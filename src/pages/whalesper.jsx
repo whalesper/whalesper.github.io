@@ -1,24 +1,22 @@
 import React, { Component } from 'react';
 import '../styles/whalesper.css';
-import Post from "../components/post/post";
-import Background from "../components/background/background";
-import { Link } from "react-router-dom";
+import Background from '../components/background/background';
 
 class WhalesperPage extends Component {
 
   render() {
     return <div>
       <Background
-        src={require("../assets/background.jpg")}
+        src={require('../assets/background.jpg')}
       />
-      <div className="Image-overlay">
-        <div className="Overlay-text Overlay-text-about">
+      <div className='Image-overlay'>
+        <div className='Overlay-text Overlay-text-about'>
           When innovation meets technology
+        </div>
       </div>
+      <div className='App-content'>
       </div>
-      <div className="App-content">
-      </div>
-    </div>
+    </div>;
   }
 
 }

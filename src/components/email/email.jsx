@@ -9,8 +9,7 @@ class Email extends Component {
         Sign up for newsletter
       </div>
       <input className="Email-input" type="email" placeholder="Email Address"/>
-    </div>
-      
+    </div>;
   }
 }
 

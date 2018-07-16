@@ -72,8 +72,8 @@ class Footer extends Component {
           <div className="Footer-column">
             <div className="Footer-column-title">
               About us
-          </div>
-          <ul className="Footer-column-list">
+            </div>
+            <ul className="Footer-column-list">
               <li className="Footer-column-item">
                 Team Whalesper
               </li>
