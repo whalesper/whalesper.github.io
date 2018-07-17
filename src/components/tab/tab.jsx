@@ -127,23 +127,12 @@ class Tab extends Component {
           <div className={'Tab-toggle'} onClick={() => this.toggleTabs()}>
             <span className={`Tab-toggle-text ${this.state.top && !this.state.expanded ? 'Top' : ''}`}>{this.state.selectedTab.title}</span> <FontAwesomeIcon className={`Tab-chevron ${this.state.expanded ? '' : 'Collapsed'} ${this.state.top && !this.state.expanded ? 'Top' : ''}`} icon={'chevron-up'} />
           </div>
-          <Trail from={{ opacity: 0, ScaleY: '-50%' }} to={{ opacity: 1, ScaleY: '0%' }} keys={this.state.tabs.map(item => item.key)}>
+          <Trail from={{ opacity: 0, ScaleY: '-50%' }} to={{ opacity: 1, ScaleY: '0%' }} keys={this.state.tabs.map(item => item.index)}>
             {this.state.expanded ?
               this.state.displayTabs.map(x => styles => <NavLink style={{ ...styles }} activeClassName='active' to={x.link} className="Body No-margin Tab" onClick={() => this.selectTabMobile(x.index)}>
                 {x.title}
               </NavLink>) : []}
           </Trail>
-          {/* <Transition
-        native
-    keys={this.state.tabs.map(item => item.index)}
-    from={{ opacity: 0, height: 0 }}
-    enter={{ opacity: 1, height: 20 }}
-    leave={{ opacity: 0, height: 0, pointerEvents: 'none' }}>
-    {this.state.tabs.map(x => styles => <NavLink style={{...styles}} activeClassName='active' to={x.link} key={x.index} className="Tab" onClick={()=> this.selectTab(x.index)}>
-      {x.title}
-    </NavLink>)}
-</Transition> */}
-          {/* {this.state.expanded ? this._renderTabs() : null} */}
         </div>
       </div>
     );
