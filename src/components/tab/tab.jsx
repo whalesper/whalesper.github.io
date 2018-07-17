@@ -45,7 +45,7 @@ class Tab extends Component {
   }
 
   handleScroll() {
-    if (window.scrollY === 0) {
+    if (window.scrollY < 100) {
       this.setState({top: true});
       this.props.updateTop(true && !this.state.expanded);
     } else {
