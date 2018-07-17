@@ -2,43 +2,51 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-spring';
 import { isMobile } from 'react-device-detect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
-import downloadFromApple from '../../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg';
-import downloadFromGoogle from '../../assets/google-play-badge.png';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+
 import './carousel.css';
+import CarouselPost from './carousel-post/carousel-post';
+// import { CarouselPost, CarouselEventPost, CarouselProductPost } from '../../models/carousel.ts';
 
-const downloadIOSAlt = (<div className="Carousel-head-text-download-alt">
-  <div className="Carousel-head-text-download-alt-small">iOS Version</div>
-  Coming Soon
-</div>);
 
-const downloadAndroidAlt = (<div className="Carousel-head-text-download-alt">
-  <div className="Carousel-head-text-download-alt-small">Android Version</div>
-  Coming Soon
-</div>);
+const data = [
+  {
+    index: 0,
+    type: 'product',
+    img: 'whalesper-header',
+    title: 'Whalesper',
+    goTo: '/products/whalesper',
+    detailsTitle: 'Meet Whalesper, our first App',
+    detailsBody: 'We have previously worked together and launched the product, Whalesper, at March 2017. It is originally an AI-powered local news aggregation iOS app. So far, we harvested nearly 31K users around Toronto area and ranked fourth in App Store Toronto search result.',
+    downloadIOS: 'https://itunes.apple.com/ca/app/%E9%B2%B8%E8%AF%AD-%E5%A4%9A%E4%BC%A6%E5%A4%9A%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90%E5%A4%B4%E6%9D%A1%E8%B5%84%E8%AE%AF/id1196585674?mt=8',
+  },
+  {
+    index: 1,
+    type: 'product',
+    img: 'iit-header',
+    title: 'iit',
+    goTo: '/products/iit',
+    detailsTitle: 'Let food find you before you find them',
+    detailsBody: 'iit, a new deep learning platform that lets food find you before you find it. Swipe through great images of dishes from nearby restaurants. iit is the first personalized app that helps you decide what to eat based on your preferences. ',
+  },
+  {
+    index: 2,
+    type: 'event',
+    img: 'camera-eats-first',
+    title: 'Camera eats first',
+    goTo: '/events#event-1',
+    detailsTitle: 'Show us how you take photos of food',
+    detailsBody: 'Start a food photography competition with us for free and let world know your delicious looking food!',
+    date: '2018 / 08 / 17',
+    location: '40 St George St'
+  }
+];
 
 const initialState = {
   currentIndex: 0,
   transition: false,
-  data: [
-    {
-      index: 0,
-      img: 'whalesper-header',
-      title: 'Whalesper',
-      goTo: '/products/whalesper',
-      detailsTitle: 'Meet Whalesper, our first App',
-      detailsBody: 'We have previously worked together and launched the product, Whalesper, at March 2017. It is originally an AI-powered local news aggregation iOS app. So far, we harvested nearly 31K users around Toronto area and ranked fourth in App Store Toronto search result.',
-      downloadIOS: 'https://itunes.apple.com/ca/app/%E9%B2%B8%E8%AF%AD-%E5%A4%9A%E4%BC%A6%E5%A4%9A%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90%E5%A4%B4%E6%9D%A1%E8%B5%84%E8%AE%AF/id1196585674?mt=8',
-    },
-    {
-      index: 1,
-      img: 'iit-header',
-      title: 'iit',
-      goTo: '/products/iit',
-      detailsTitle: 'Let food find you before you find them',
-      detailsBody: 'iit, a new deep learning platform that lets food find you before you find it. Swipe through great images of dishes from nearby restaurants. iit is the first personalized app that helps you decide what to eat based on your preferences. ',
-    }
-  ]
+  data: data.sort((a, b) => a.index - b.index)
 };
 
 class Carousel extends Component {
@@ -97,14 +105,6 @@ class Carousel extends Component {
         {this.state.data.map(x => this._renderIndicator(x))}
       </div>;
     } else return null;
-  }
-
-  _renderDownloadLinks(data) {
-    // const data = this.state.data[this.state.currentIndex];
-    return <div className="Carousel-head-text-download-wrapper">
-      {data.downloadIOS ? <a href={data.downloadIOS} target="_blank" rel="noopener noreferrer"><img src={downloadFromApple} className="Carousel-head-text-download" alt='download ios' /></a> : downloadIOSAlt}
-      {data.downloadAndroid ? <a href={data.downloadAndroid} target="_blank" rel="noopener noreferrer"><img src={downloadFromGoogle} className="Carousel-head-text-download" alt='download android' /></a> : downloadAndroidAlt}
-    </div>;
   }
 
   isMobile() {
@@ -177,7 +177,7 @@ class Carousel extends Component {
         <div className="Carousel-details-background">
           <div className="Carousel-details" onMouseEnter={() => this.clearInterval()} onMouseLeave={() => this.setInterval()}>
             <Parallax ref={pa => this.parallax = pa} pages={this.state.data.length} horizontal scrolling={isMobile}>
-              {this.state.data.map(data => this._renderDetails(data))}
+              {this.state.data.map(data => <CarouselPost key={data.index} offset={data.index} data={data} type={data.type} />)}
             </Parallax>
           </div>
         </div>

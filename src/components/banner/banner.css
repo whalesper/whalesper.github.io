@@ -78,7 +78,7 @@
   outline-color: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .Banner-container {
     position: relative;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.16);

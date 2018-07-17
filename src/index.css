@@ -77,7 +77,13 @@ body {
   margin:  auto;
 }
 
-@media screen and (max-width: 800px) {
+.Row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
   .Title-primary {
     font-size: 32px;
     margin-bottom: 16px;

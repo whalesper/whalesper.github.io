@@ -11,7 +11,7 @@ import ProductsPage from './pages/products/products';
 import WhalesperPage from './pages/products/whalesper/whalesper';
 import HomePage from './pages/home/home';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faLocationArrow, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 import IitPage from './pages/products/iit/iit';
@@ -21,7 +21,9 @@ library.add(
   faChevronRight,
   faChevronDown,
   faChevronUp,
-  faInstagram
+  faInstagram,
+  faLocationArrow,
+  faCalendar
 );
 
 class App extends Component {

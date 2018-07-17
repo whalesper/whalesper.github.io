@@ -155,7 +155,7 @@
                                   supported by Chrome and Opera */
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .App-card {
     position: absolute;
     width: 100%;

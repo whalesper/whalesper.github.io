@@ -48,7 +48,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .Container {
     border-top: 1px solid #eee;
     margin-bottom: 40px;

@@ -111,7 +111,22 @@
   color: white;
 }
 
-@media screen and (max-width: 800px) {
+.Tab-toggle {
+  font-size: 24px;
+  font-weight: normal;
+  color: #666;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  margin-left: 20px;
+  /* display: inline; */
+  /* display: flex; */
+}
+
+.Tab-toggle-text.Top {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
   .Tab-container {
     margin: 20px;
     width: calc(100% - 40px);
@@ -154,31 +169,10 @@
     font-size: 21px
   }
 
-  .Tab:first-child {
-    /* transition-delay: none; */
-  }
-
   .Tab-toggle {
     font-size: 21px;
-    font-weight: normal;
-    color: #666;
-    cursor: pointer;
-    transition: ease-in-out 0.5s;
-    margin-left: 20px;
-    /* display: inline; */
-    /* display: flex; */
   }
-
-  .Tab-toggle-text.Top {
-    font-size: 21px;
-    font-weight: normal;
-    color: #fff;
-    cursor: pointer;
-    transition: ease-in-out 0.5s;
-    margin-left: 20px;
-    /* display: inline; */
-    /* display: flex; */
-  }
+  
 
   .Top-logo-container.Top {
     color: white;

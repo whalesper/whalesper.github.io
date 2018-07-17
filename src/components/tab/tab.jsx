@@ -129,7 +129,7 @@ class Tab extends Component {
           </div>
           <Trail from={{ opacity: 0, ScaleY: '-50%' }} to={{ opacity: 1, ScaleY: '0%' }} keys={this.state.tabs.map(item => item.key)}>
             {this.state.expanded ?
-              this.state.displayTabs.map(x => styles => <NavLink style={{ ...styles }} activeClassName='active' to={x.link} className="Tab Body" onClick={() => this.selectTabMobile(x.index)}>
+              this.state.displayTabs.map(x => styles => <NavLink style={{ ...styles }} activeClassName='active' to={x.link} className="Body No-margin Tab" onClick={() => this.selectTabMobile(x.index)}>
                 {x.title}
               </NavLink>) : []}
           </Trail>
