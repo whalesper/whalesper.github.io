@@ -162,7 +162,7 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className="Carousel-container" onScroll={() => this.clearInterval()}      >
+      <div className="Carousel-container" onScroll={() => this.clearInterval()} >
         <div className="Carousel-gallery">
           {this._renderIndicators()}
           <div className="Carousel-arrows">

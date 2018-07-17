@@ -22,7 +22,10 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { loaded: false };
+    this.state = {
+      loaded: false,
+      top: true
+    };
   }
 
   componentDidMount() {
@@ -32,6 +35,11 @@ class App extends Component {
     ReactGA.pageview(window.location.pathname + window.location.search);
 
     this.setState({ loaded: true });
+    this.tabs = React.createRef();
+  }
+
+  updateTop(top) {
+    this.setState({top: top});
   }
 
   render() {
@@ -45,8 +53,8 @@ class App extends Component {
           //   to={{ opacity: 1, transform: 'translate3d(0%,0,0)' }}>
           // {style => 
           <div className="App">
-            <header className="App-header">
-              <Tab />
+            <header className={`App-header ${this.state.top ? 'Top' : ''}`}>
+              <Tab ref={tab => this.tabs = tab} updateTop={this.updateTop.bind(this)}/>
             </header>
             <Switch location={location}>
               <Route exact path="/" component={HomePage} />
