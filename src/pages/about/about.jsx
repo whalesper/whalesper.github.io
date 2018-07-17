@@ -12,7 +12,7 @@ class AboutPage extends Component {
   render() {
     return <div>
       <Background
-        src={require('../../assets/background.jpg')}
+        src={require('../../assets/rawpixel-250087-unsplash.jpg')}
       />
       <div className='Image-overlay'>
         <h1 className='Title-primary Text-white Text-center'>
@@ -26,26 +26,35 @@ class AboutPage extends Component {
             name='Luffy (Shunzhe) Yu'
             title='Founder'
             email='luffy.yu@mail.utoronto.ca'
+            image={require('../../assets/team/shunzheyu.jpg')}
           />
           <Guy
             name='Gloria (Bihan) Zhu'
             title='Co-founder'
             email='bihan.zhu@mail.utoronto.ca'
+            image={require('../../assets/team/bihanzhu.jpg')}
+            instagram='tiamog'
           />
           <Guy
             name='Ajax (Jiacheng) Jiang'
             title='Co-founder'
             email='ajax.jiang@mail.utoronto.ca'
+            image={require('../../assets/team/jiachengjiang.jpg')}
+            instagram='b4whitby'
           />
           <Guy
             name='Hao Ren Zhong'
             title='Designer, Developer'
             email='haoren.zhong@mail.utoronto.ca'
+            image={require('../../assets/team/haorenzhong.jpg')}
+            instagram='neroah_z'
           />
           <Guy
             name='Kinder (Jianda) Chen'
             title='Data Scientist, Developer'
             email='jianda.chen@mail.utoronto.ca'
+            instagram='chenkinder'
+            image={require('../../assets/team/jiandachen.jpg')}
           />
         </div>
         <a id="contact"></a>

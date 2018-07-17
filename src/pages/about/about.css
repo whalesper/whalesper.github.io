@@ -1,3 +1,5 @@
-.Overlay-text-about {
-  text-align: center
+.Guy-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

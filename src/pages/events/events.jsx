@@ -11,7 +11,7 @@ class EventPage extends Component {
   render() {
     return <div>
       <Background
-        src={require('../../assets/background.jpg')}
+        src={require('../../assets/adam-whitlock-270558-unsplash.jpg')}
       />
       <div className='Image-overlay'>
         <h1 className='Title-primary Text-white'>

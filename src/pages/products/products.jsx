@@ -12,7 +12,7 @@ class ProductsPage extends Component {
   render() {
     return <div>
       <Background
-        src={require('../../assets/background.jpg')}
+        src={require('../../assets/tyler-franta-589346-unsplash.jpg')}
       />
       <div className='Image-overlay'>
         <h1 className='Title-primary Text-white Text-center'>
