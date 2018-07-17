@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 
@@ -12,6 +12,7 @@ import WhalesperPage from './pages/products/whalesper/whalesper';
 import HomePage from './pages/home/home';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import IitPage from './pages/products/iit/iit';
 
 library.add(faChevronLeft);
 library.add(faChevronRight);
@@ -60,6 +61,7 @@ class App extends Component {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/products" component={ProductsPage} />
               <Route exact path="/products/whalesper" component={WhalesperPage} />
+              <Route exact path="/products/iit" component={IitPage} />
               <Route path="/events" component={EventPage} />
               <Route path="/about" component={AboutPage} />
             </Switch>

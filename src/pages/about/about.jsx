@@ -20,6 +20,7 @@ class AboutPage extends Component {
         </h1>
       </div>
       <div className='App-content'>
+        <a id="team"></a>
         <div className='Guy-wrapper'>
           <Guy
             name='Luffy (Shunzhe) Yu'
@@ -47,6 +48,7 @@ class AboutPage extends Component {
             email='jianda.chen@mail.utoronto.ca'
           />
         </div>
+        <a id="contact"></a>
       </div>
     </div>;
   }

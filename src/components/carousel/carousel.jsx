@@ -34,7 +34,7 @@ const initialState = {
       index: 1,
       img: 'iit-header',
       title: 'iit',
-      goTo: '/products/whalesper',
+      goTo: '/products/iit',
       detailsTitle: 'Let food find you before you find them',
       detailsBody: 'iit, a new deep learning platform that lets food find you before you find it. Swipe through great images of dishes from nearby restaurants. iit is the first personalized app that helps you decide what to eat based on your preferences. ',
     }
