@@ -70,8 +70,8 @@ class Carousel extends Component {
     this.setInterval();
   }
 
-  setInterval(index = 10000) {
-    this.interval = setInterval(() => this.goTo(this.state.currentIndex + 1), index);
+  setInterval(interval = 10000) {
+    this.interval = setInterval(() => this.goTo(this.state.currentIndex + 1), interval);
   }
 
   clearInterval() {
@@ -159,10 +159,29 @@ class Carousel extends Component {
   scroll(to) {
     this.parallax.scrollTo(to);
   }
+  onSwipeStart(event) {
+    this.clearInterval();
+    // console.log(event.changedTouches);
+    this.setState({ changedTouch: event.changedTouches[0] });
+  }
+
+  onSwipeEnd(event) {
+    let newX = event.changedTouches[0].clientX;
+    let width = window.innerWidth;
+    let offset = this.state.changedTouch.clientX - newX;
+    let index = Math.floor(Math.abs(offset / width));
+    let extra = Math.abs(offset) % width;
+    index = index + ((extra > (width / 4)) ? 1 : 0);
+    index = index * (offset < 0 ? -1 : 1);
+    let target = this.state.currentIndex + index;
+    if (target < 0) target = 0;
+    else if (target > this.state.data.length - 1) target = this.state.data.length - 1;
+    this.goTo(target);    
+  }
 
   render() {
     return (
-      <div className="Carousel-container" onScroll={() => this.clearInterval()} >
+      <div className="Carousel-container" >
         <div className="Carousel-gallery">
           {this._renderIndicators()}
           <div className="Carousel-arrows">
@@ -175,7 +194,7 @@ class Carousel extends Component {
           </div>
         </div>
         <div className="Carousel-details-background">
-          <div className="Carousel-details" onMouseEnter={() => this.clearInterval()} onMouseLeave={() => this.setInterval()}>
+          <div className="Carousel-details" onMouseEnter={() => this.clearInterval()} onMouseLeave={() => this.setInterval()} onTouchStart={(this.onSwipeStart.bind(this))} onTouchEnd={(this.onSwipeEnd.bind(this))}>
             <Parallax ref={pa => this.parallax = pa} pages={this.state.data.length} horizontal scrolling={isMobile}>
               {this.state.data.map(data => <CarouselPost key={data.index} offset={data.index} data={data} type={data.type} />)}
             </Parallax>
