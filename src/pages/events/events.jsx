@@ -4,6 +4,10 @@ import Background from '../../components/background/background';
 
 class EventPage extends Component {
 
+  componentDidMount() {
+    document.title = 'Events | Whalesper Technology Inc.';
+  }
+
   render() {
     return <div>
       <Background

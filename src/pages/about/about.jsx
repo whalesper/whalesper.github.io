@@ -5,8 +5,8 @@ import Background from '../../components/background/background';
 
 class AboutPage extends Component {
 
-  componentWillMount() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+  componentDidMount() {
+    document.title = 'About Us | Whalesper Technology Inc.';
   }
 
   render() {

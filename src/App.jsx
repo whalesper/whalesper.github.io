@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    document.title = 'Whalesper';
+    document.title = 'Whalesper Technology Inc.';
 
     ReactGA.initialize('UA-122173913-1');
     ReactGA.pageview(window.location.pathname + window.location.search);

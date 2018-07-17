@@ -4,6 +4,10 @@ import Email from '../../components/email/email';
 import './home.css';
 
 class HomePage extends Component {
+  
+  componentDidMount() {
+    document.title = 'Home | Whalesper Technology Inc.';
+  }
 
   render() {
     return <div className='Home-container'>

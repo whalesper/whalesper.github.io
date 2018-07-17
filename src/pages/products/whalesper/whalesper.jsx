@@ -6,6 +6,10 @@ import Background from '../../../components/background/background';
 
 class WhalesperPage extends Component {
 
+  componentDidMount() {
+    document.title = 'Whalesper | Products | Whalesper Technology Inc.';
+  }
+
   render() {
     return <div>
       <Background

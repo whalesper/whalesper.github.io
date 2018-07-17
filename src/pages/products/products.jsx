@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 
 class ProductsPage extends Component {
 
+  componentDidMount() {
+    document.title = 'Products | Whalesper Technology Inc.';
+  }
+
   render() {
     return <div>
       <Background
