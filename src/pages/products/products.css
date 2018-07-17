@@ -13,13 +13,13 @@
 }
 
 .App-card-container.Whalesper {
-  background: linear-gradient(to bottom left, purple, blue);
+  background: linear-gradient(to bottom left, #29ABE2, #1B1464);
   box-shadow: 0px 5px 10px rgba(0, 0, 255, 0.3);
   transition: all 1s;
 }
 
 .App-card-container.iit {
-  background: linear-gradient(to bottom right, red, orange);
+  background: linear-gradient(to bottom right, #FD8828, rgb(255, 162, 85));
   box-shadow: 0px 5px 10px rgba(255, 165, 0, 0.3);
   transition: all 1s;
 }
