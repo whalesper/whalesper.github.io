@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 
@@ -45,6 +45,7 @@ class App extends Component {
 
     this.setState({ loaded: true });
     this.tabs = React.createRef();
+    // console.log(process.env)
   }
 
   updateTop(top) {
@@ -54,7 +55,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Route render={({location}) => <div className="App">
+        <Route path={process.env.PUBLIC_URL + '/'} render={({location}) => <div className="App">
           <header className={`App-header ${this.state.top ? 'Top' : ''}`}>
             <Tab ref={tab => this.tabs = tab} updateTop={this.updateTop.bind(this)} />
           </header>

@@ -46,10 +46,10 @@ class Tab extends Component {
 
   handleScroll() {
     if (window.scrollY < 100) {
-      this.setState({top: true});
+      this.setState({ top: true });
       this.props.updateTop(true && !this.state.expanded);
     } else {
-      if (this.state.top) this.setState({top: false});
+      if (this.state.top) this.setState({ top: false });
       this.props.updateTop(false);
     }
 
@@ -70,7 +70,7 @@ class Tab extends Component {
       displayTabs: displayTabs,
       expanded: false,
     });
-    window.scrollTo({top: 0, behavior:'smooth'});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     this.props.updateTop(true);
   }
 
@@ -83,7 +83,7 @@ class Tab extends Component {
       displayTabs: displayTabs,
       expanded: false
     });
-    window.scrollTo({top: 0, behavior:'smooth'});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     this.props.updateTop(true);
   }
 
@@ -94,11 +94,13 @@ class Tab extends Component {
         let i = index;
         i++;
         index++;
-        return x.link === '/' ? <Link activeClassName='active' to={x.link} key={index} className={`Tab ${this.state.top ? 'Top' : ''}`} onClick={() => this.selectTab(i)}>
-        {x.title}
-      </Link>: <NavLink activeClassName='active' to={x.link} key={index} className={`Tab ${this.state.top ? 'Top' : ''}`} onClick={() => this.selectTab(i)}>
-          {x.title}
-        </NavLink>;
+        return x.link === '/'
+          ? <Link to={x.link} key={index} className={`Tab ${this.state.top ? 'Top' : ''}`} onClick={() => this.selectTab(i)}>
+            {x.title}
+          </Link>
+          : <NavLink activeClassName='active' to={x.link} key={index} className={`Tab ${this.state.top ? 'Top' : ''}`} onClick={() => this.selectTab(i)}>
+            {x.title}
+          </NavLink>;
       })}
     </div>;
   }
@@ -108,7 +110,7 @@ class Tab extends Component {
       <div className={`Tab-container ${this.state.top ? 'Top' : ''}`}>
         <NavLink className={`Top-logo-container ${this.state.top ? 'Top' : ''}`} to="/">
           <svg id="Layer_1" alt='whalesper logo' data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.79 49.43">
-            <path className="cls-1" d="M972.77,522.07a19.1,19.1,0,0,1-9.17-2.17c-2.63-1.44-2.84-3.12-6.22-4.81a18.31,18.31,0,0,0-14.17-.67,23,23,0,0,0-13.71,29.44A28.71,28.71,0,0,0,966.3,561a35.88,35.88,0,0,0,21.58-45.53A20.44,20.44,0,0,1,972.77,522.07Z" transform="translate(-928.11 -513.3)"/>
+            <path className="cls-1" d="M972.77,522.07a19.1,19.1,0,0,1-9.17-2.17c-2.63-1.44-2.84-3.12-6.22-4.81a18.31,18.31,0,0,0-14.17-.67,23,23,0,0,0-13.71,29.44A28.71,28.71,0,0,0,966.3,561a35.88,35.88,0,0,0,21.58-45.53A20.44,20.44,0,0,1,972.77,522.07Z" transform="translate(-928.11 -513.3)" />
           </svg> Whalesper
         </NavLink>
 
@@ -122,7 +124,7 @@ class Tab extends Component {
       <div className={`Tab-container ${this.state.top && !this.state.expanded ? 'Top' : ''}`}>
         <NavLink className={`Top-logo-container ${this.state.top && !this.state.expanded ? 'Top' : ''}`} to="/">
           <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.79 49.43">
-            <path className="cls-1" d="M972.77,522.07a19.1,19.1,0,0,1-9.17-2.17c-2.63-1.44-2.84-3.12-6.22-4.81a18.31,18.31,0,0,0-14.17-.67,23,23,0,0,0-13.71,29.44A28.71,28.71,0,0,0,966.3,561a35.88,35.88,0,0,0,21.58-45.53A20.44,20.44,0,0,1,972.77,522.07Z" transform="translate(-928.11 -513.3)"/>
+            <path className="cls-1" d="M972.77,522.07a19.1,19.1,0,0,1-9.17-2.17c-2.63-1.44-2.84-3.12-6.22-4.81a18.31,18.31,0,0,0-14.17-.67,23,23,0,0,0-13.71,29.44A28.71,28.71,0,0,0,966.3,561a35.88,35.88,0,0,0,21.58-45.53A20.44,20.44,0,0,1,972.77,522.07Z" transform="translate(-928.11 -513.3)" />
           </svg> Whalesper
         </NavLink>
         <div className="Tabs">
