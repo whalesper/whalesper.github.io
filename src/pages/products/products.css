@@ -1,0 +1,231 @@
+.App-card-wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+.App-card-container {
+  width: 61.8%;
+  height: 320px;
+  margin-bottom: 120px;
+  transform: skewY(4deg);
+}
+
+.App-card-container.Whalesper {
+  background: linear-gradient(to bottom left, #29ABE2, #1B1464);
+  box-shadow: 0px 5px 10px rgba(0, 0, 255, 0.3);
+  transition: all 1s;
+}
+
+.App-card-container.iit {
+  background: linear-gradient(to bottom right, #FD8828, rgb(255, 162, 85));
+  box-shadow: 0px 5px 10px rgba(255, 165, 0, 0.3);
+  transition: all 1s;
+}
+
+/* .App-card-container.Whalesper:hover {
+  background: linear-gradient(to bottom left, purple, blue);
+}
+
+.App-card-container.iit:hover {
+  background: linear-gradient(to bottom left, red, orange);
+} */
+
+.App-margin-right {
+  margin-right: 20px
+}
+
+.App-card {
+  position: absolute;
+  width: 61.8%;
+  height: 420px;
+  /* background: green; */
+  margin-top: -100px;
+  /* padding-top: 50px; */
+  overflow: hidden;
+}
+
+.App-card-right {
+  position: absolute;
+  width: 61.8%;
+  right: 0;
+  height: 420px;
+  /* background: green; */
+  margin-top: -100px;
+  /* padding-top: 50px; */
+  overflow: hidden;
+}
+
+.App-phone {
+  transform: skewY(-4deg);
+  width: 300px;
+  position: absolute;
+  left: 100px;
+  margin-top: 50px;
+  transition: margin 0.5s;
+}
+
+.App-phone.Whalesper {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 255, 0.3));
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 255, 0.3));
+}
+
+.App-phone.iit {
+  filter: drop-shadow(0px 0px 5px rgba(255, 165, 0, 0.3));
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 165, 0, 0.3));
+  /* left: auto;
+  right: 100px; */
+}
+
+.App-phone.App-phone-right {
+  /* width: 300px; */
+  position: absolute;
+  left: initial;
+  right: 100px;
+  margin-top: 50px;
+  transition: margin 0.5s;
+}
+
+.App-card-text-container {
+  transform: skewY(-4deg);
+  margin-left: 400px;
+  width: calc(100% - 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.App-card-text-container.Left {
+  margin-left: 0;
+  width: calc(100% - 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.App-card-icon {
+  height: 56px;
+  margin-right: 5px;
+}
+
+.App-card-title-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.App-card-title {
+  font-size: 48px;
+  font-weight: bolder;
+  color: white;
+  align-items: center;
+  display: flex;
+}
+
+.App-card-secondary-title {
+  font-size: 36px;
+  /* font-weight: bolder; */
+  color: white;
+  opacity: 0.618;
+}
+
+.App-card-container:hover .App-phone {
+  margin-top: 10px;
+}
+
+
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+@media screen and (max-width: 768px) {
+  .App-card {
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    /* background: green; */
+    margin-top: -100px;
+    /* padding-top: 50px; */
+    overflow: hidden;
+  }
+
+  .App-card-right {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 320px;
+    /* background: green; */
+    margin-top: -100px;
+    /* padding-top: 50px; */
+    overflow: hidden;
+  }
+
+  .App-card-container {
+    width: calc(100%);
+    height: 220px;
+    margin-bottom: 120px;
+  }
+
+  .App-phone {
+    transform: skewY(-4deg);
+    width: 150px;
+    position: absolute;
+    left: 20px;
+    margin-top: 50px;
+    transition: margin 0.5s;
+  }
+
+  .App-phone.App-phone-right {
+    /* width: 300px; */
+    position: absolute;
+    left: initial;
+    right: 20px;
+    margin-top: 50px;
+    transition: margin 0.5s;
+  }
+
+  .App-card-text-container {
+    margin-left: 175px;
+    width: calc(100% - 175px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .App-card-text-container.Left {
+    margin-left: 0;
+    width: calc(100% - 175px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .App-card-icon {
+    height: 32px;
+    margin-right: 5px;
+  }
+
+  .Whalesper-title-smaller {
+    font-size: 27px;
+  }
+}

@@ -1,0 +1,136 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  /* height: 100%; */
+  z-index: -1;
+  /* background: url(./assets/background.jpg) no-repeat left top;
+  background-attachment: fixed;
+  background-size: 100%; */
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  /* display: flex; */
+  /* flex-direction: row; */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  -webkit-transition: ease-in-out 0.5s;
+  /* For Safari 3.1 to 6.0 */
+  transition: ease-in-out 0.5s;
+  /* justify-content: center; */
+  z-index: 99999;
+}
+
+.App-header.Top {
+  background: none;
+  box-shadow: none;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-content {
+  padding: 20px 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+  /* height: 100%; */
+  background: #fff;
+  /* padding: auto 20px; */
+  /* min-height: 1080px; */
+  /* margin: 48px auto; */
+  /* margin-top: 100%; */
+}
+
+.App-slideshow {
+  z-index: -1;
+  display: block;
+  width: calc(100% - 740px);
+  height: 100%;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+
+.Image-overlay {
+  position: relative;
+  /* top: 0px; */
+  /* left: 0px; */
+  padding: 250px 0px 150px 0px;
+  max-width: 61.8%;
+  margin: auto
+}
+
+.Overlay-text {
+  font-size: 96px;
+  color: white;
+  text-align: left;
+  font-weight: bolder;
+  box-shadow: 0px 0px 10px rbga(0, 0, 0, 0.16)
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    text-align: center;
+    display: flex;
+    flex: 1;
+    /* flex-direction: column-reverse; */
+    width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+  .App-content {
+    padding: 20px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+    height: auto;
+    background: #fff;
+    /* min-height: 1080px; */
+    width: calc(100%-40px)
+  }
+  .App-slideshow {
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* right: 0px; */
+    /* top: 0px; */
+  }
+  .Overlay-text {
+    font-size: 48px;
+    color: white;
+    max-width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    box-shadow: 0px 0px 10px rbga(0, 0, 0, 0.16)
+  }
+  .Image-overlay {
+    position: relative;
+    /* top: 0px; */
+    /* left: 0px; */
+    padding: 140px 0px 70px 0px;
+    max-width: calc(100% - 40px);
+    margin: auto
+  }
+}
