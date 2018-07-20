@@ -20,7 +20,9 @@ class AboutPage extends Component {
         </h1>
       </div>
       <div className='App-content'>
-        <a id="team"></a>
+        <a id="team">
+          <h2 className="Title-secondary">Members</h2>
+        </a>
         <div className='Guy-wrapper'>
           <Guy
             name='Luffy (Shunzhe) Yu'
@@ -57,7 +59,9 @@ class AboutPage extends Component {
             image={require('../../assets/team/jiandachen.jpg')}
           />
         </div>
-        <a id="contact"></a>
+        <a id="contact">
+          <h2 className="Title-secondary">Contact Us</h2>
+        </a>
       </div>
     </div>;
   }

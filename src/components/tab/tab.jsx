@@ -124,9 +124,9 @@ class Tab extends Component {
           </svg> Whalesper
         </NavLink>
         <div className="Tabs">
-          <div className={'Tab-toggle'} onClick={() => this.toggleTabs()}>
+          <a className={'Tab-toggle'} onClick={() => this.toggleTabs()}>
             <span className={`Tab-toggle-text ${this.state.top && !this.state.expanded ? 'Top' : ''}`}>{this.state.selectedTab.title}</span> <FontAwesomeIcon className={`Tab-chevron ${this.state.expanded ? '' : 'Collapsed'} ${this.state.top && !this.state.expanded ? 'Top' : ''}`} icon={'chevron-up'} />
-          </div>
+          </a>
           <Trail from={{ opacity: 0, ScaleY: '-50%' }} to={{ opacity: 1, ScaleY: '0%' }} keys={this.state.tabs.map(item => item.index)}>
             {this.state.expanded ?
               this.state.displayTabs.map(x => styles => <NavLink style={{ ...styles }} activeClassName='active' to={x.link} className="Body No-margin Tab" onClick={() => this.selectTabMobile(x.index)}>

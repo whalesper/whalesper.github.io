@@ -34,7 +34,8 @@
   "devDependencies": {
     "eslint": "^5.1.0",
     "eslint-plugin-react": "^7.10.0",
-    "gh-pages": "^1.2.0"
+    "gh-pages": "^1.2.0",
+    "react-a11y": "^1.0.0"
   },
   "homepage": "http://whalesper.co"
 }

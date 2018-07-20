@@ -20,7 +20,6 @@ class EventPage extends Component {
       </div>
       <div className='App-content'>
         <div className='Guy-wrapper'>
-          <a id='event-1'></a>
           <Post/>
         </div>
       </div>

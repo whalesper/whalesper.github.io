@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-spring';
 import { isMobile } from 'react-device-detect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { Link } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import './carousel.css';
@@ -12,7 +12,7 @@ import CarouselPost from './carousel-post/carousel-post';
 
 const data = [
   {
-    index: 0,
+    index: 2,
     type: 'product',
     img: 'whalesper-header',
     title: 'Whalesper',
@@ -22,16 +22,17 @@ const data = [
     downloadIOS: 'https://itunes.apple.com/ca/app/%E9%B2%B8%E8%AF%AD-%E5%A4%9A%E4%BC%A6%E5%A4%9A%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90%E5%A4%B4%E6%9D%A1%E8%B5%84%E8%AE%AF/id1196585674?mt=8',
   },
   {
-    index: 1,
+    index: 0,
     type: 'product',
     img: 'iit-header',
     title: 'iit',
     goTo: '/products/iit',
     detailsTitle: 'Let food find you before you find them',
     detailsBody: 'iit, a new deep learning platform that lets food find you before you find it. Swipe through great images of dishes from nearby restaurants. iit is the first personalized app that helps you decide what to eat based on your preferences. ',
+    beta: 'https://goo.gl/forms/AIiPsXoBp2l5RrlE3'
   },
   {
-    index: 2,
+    index: 1,
     type: 'event',
     img: 'camera-eats-first',
     title: 'Camera eats first',
@@ -67,6 +68,7 @@ class Carousel extends Component {
       currentIndex: index,
     });
     this.scroll(index);
+    this.props.updateBackground(index === 2);
     this.setInterval();
   }
 
@@ -92,11 +94,11 @@ class Carousel extends Component {
 
   _renderIndicator(data) {
     return (
-      <div
+      <button
         className={`Carousel-indicator ${data.index === this.state.currentIndex ? 'active' : ''}`}
         key={data.index}
         onClick={() => this.goTo(data.index)}>
-      </div>);
+      </button>);
   }
 
   _renderIndicators() {
@@ -185,12 +187,12 @@ class Carousel extends Component {
         <div className="Carousel-gallery">
           {this._renderIndicators()}
           <div className="Carousel-arrows">
-            <div className="Carousel-arrow" onClick={() => this.goTo(this.state.currentIndex - 1)}>
+            <button className="Carousel-arrow" onClick={() => this.goTo(this.state.currentIndex - 1)}>
               <FontAwesomeIcon icon="chevron-left" />
-            </div>
-            <div className="Carousel-arrow" onClick={() => this.goTo(this.state.currentIndex + 1)}>
+            </button>
+            <button className="Carousel-arrow" onClick={() => this.goTo(this.state.currentIndex + 1)}>
               <FontAwesomeIcon icon="chevron-right" />
-            </div>
+            </button>
           </div>
         </div>
         <div className="Carousel-details-background">
@@ -205,5 +207,9 @@ class Carousel extends Component {
     );
   }
 }
+
+Carousel.propTypes = {
+  updateBackground: PropTypes.func.isRequired,
+};
 
 export default Carousel;

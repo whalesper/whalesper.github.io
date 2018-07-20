@@ -31,7 +31,17 @@ class CarouselPost extends PureComponent {
 
   _renderDownloadLinks(data) {
     // const data = this.state.data[this.state.currentIndex];
-    return <div className="Carousel-head-text-download-wrapper">
+    if (data.beta) {
+      return <div className="Carousel-head-text-download-wrapper">
+        <a href={data.beta} target="_blank" rel="noopener noreferrer">
+          <div className="Carousel-head-text-download-alt">
+            <div className="Carousel-head-text-download-alt-small">Beta Test Coming Soon</div>
+            Join Today
+          </div>
+        </a>
+      </div>;
+    }
+    else return <div className="Carousel-head-text-download-wrapper">
       {data.downloadIOS ? <a href={data.downloadIOS} target="_blank" rel="noopener noreferrer"><img src={downloadFromApple} className="Carousel-head-text-download" alt='download ios' /></a> : downloadIOSAlt}
       {data.downloadAndroid ? <a href={data.downloadAndroid} target="_blank" rel="noopener noreferrer"><img src={downloadFromGoogle} className="Carousel-head-text-download" alt='download android' /></a> : downloadAndroidAlt}
     </div>;
@@ -78,7 +88,7 @@ class CarouselPost extends PureComponent {
         </div>
       </Parallax.Layer>
       <Parallax.Layer offset={offset} speed={2 * speed}>
-        <img className="Carousel-image" src={require(`../../../assets/carousel/${data.img + (this.isMobile() ? '@1x.png' : '@2x.png')}`)} alt="" />
+        <img className="Carousel-image" src={require(`../../../assets/carousel/${data.img + (this.isMobile() ? '@1x.png' : '@2x.png')}`)} alt={`${data.detailsTitle}`} presentation="true"/>
       </Parallax.Layer>
       <Parallax.Layer offset={offset} speed={0.5 * speed}>
         <div className="Carousel-head-wrapper Width-golden">

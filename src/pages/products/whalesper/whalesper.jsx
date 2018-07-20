@@ -30,7 +30,12 @@ class WhalesperPage extends Component {
             The Whalesper app now uses NLP(natural language processing) to auto-classify around 200 feeds every day into target topics and make summarization for user.
           </p>
 
-          <Banner></Banner>
+          <Banner
+            title={'Whalesper'}
+            subtitle={'Discover this city'}
+            icon={require('../../../assets/whalesper-white.svg')}
+            link={'https://itunes.apple.com/ca/app/%E9%B2%B8%E8%AF%AD-%E5%A4%9A%E4%BC%A6%E5%A4%9A%E5%90%83%E5%96%9D%E7%8E%A9%E4%B9%90%E5%A4%B4%E6%9D%A1%E8%B5%84%E8%AE%AF/id1196585674?mt=8'}
+          />
         </article>
       </div>
     </div>;

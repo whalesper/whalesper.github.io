@@ -31,7 +31,7 @@ body {
 
 .Body {
   font-size: 21px;
-  line-height: 30px;
+  line-height: 33px;
   margin-bottom: 24px;
   font-weight: normal;
   color: #999
@@ -97,10 +97,10 @@ body {
   }
   
   .Body {
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 28px;
     margin-bottom: 16px;
-    font-weight: normal;
+    font-weight: 100;
   }
   
   .Text-bold {

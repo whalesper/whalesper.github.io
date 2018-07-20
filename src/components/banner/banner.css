@@ -78,6 +78,10 @@
   outline-color: none;
 }
 
+.Banner-text-secondary {
+  margin-right: 5px;
+}
+
 @media screen and (max-width: 768px) {
   .Banner-container {
     position: relative;

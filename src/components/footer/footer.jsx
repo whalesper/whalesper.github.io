@@ -6,7 +6,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="Footer-container">
+      <footer className="Footer-container">
         {/* <div className="Footer-grid-wrapper">
           <div className="Footer-grid">
           <img className="Footer-grid-background" src={require('../../assets/background.jpg')} alt="bg" />
@@ -87,7 +87,7 @@ class Footer extends Component {
         <div className="Footer-bottom-row">
         Copyright © 2018 Whalesper Technology Inc.
         </div>
-      </div>
+      </footer>
     );
   }
 }
