@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trail } from 'react-spring';
@@ -14,7 +14,7 @@ const initialState = {
     {
       index: 0,
       title: 'Home',
-      link: '/home'
+      link: '/'
     }, {
       index: 1,
       title: 'Events',
@@ -94,7 +94,9 @@ class Tab extends Component {
         let i = index;
         i++;
         index++;
-        return <NavLink activeClassName='active' to={x.link} key={index} className={`Tab ${this.state.top ? 'Top' : ''}`} onClick={() => this.selectTab(i)}>
+        return x.link === '/' ? <Link activeClassName='active' to={x.link} key={index} className={`Tab ${this.state.top ? 'Top' : ''}`} onClick={() => this.selectTab(i)}>
+        {x.title}
+      </Link>: <NavLink activeClassName='active' to={x.link} key={index} className={`Tab ${this.state.top ? 'Top' : ''}`} onClick={() => this.selectTab(i)}>
           {x.title}
         </NavLink>;
       })}

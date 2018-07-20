@@ -24,19 +24,19 @@ class NotFoundPage extends Component {
       <div className='App-content'>
         <article className="Paragraph-container">
           <h2 className="Title-secondary">Getting Lost?</h2>
-          <p className='Body'>
+          <p className='Body Link'>
             {'Don\'t worry, let\'s take you back...'}
           </p>
-          <p className='Body'>
+          <p className='Body Link'>
             <Link to="/">Home</Link>
           </p>
-          <p className='Body'>
+          <p className='Body Link'>
             <Link to="/events">Events</Link>
           </p>
-          <p className='Body'>
+          <p className='Body Link'>
             <Link to="/products">Products</Link>
           </p>
-          <p className='Body'>
+          <p className='Body Link'>
             <Link to="/about">About Us</Link>
           </p>
         </article>

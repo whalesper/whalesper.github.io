@@ -59,14 +59,14 @@ class App extends Component {
             <Tab ref={tab => this.tabs = tab} updateTop={this.updateTop.bind(this)} />
           </header>
           <Switch location={location}>
-            <Route exact path="/home" component={HomePage} />
+            <Route exact path="/" component={HomePage} />
             <Route exact path="/products" component={ProductsPage} />
             <Route exact path="/products/whalesper" component={WhalesperPage} />
             <Route exact path="/products/iit" component={IitPage} />
             <Route exact path="/products/:product" component={({ match }) => <ProductsPage productName={match.params.product}></ProductsPage>} />
             <Route path="/events" component={EventPage} />
             <Route path="/about" component={AboutPage} />
-            <Redirect from='/' to='/home' />
+            {/* <Redirect from='/' to='/home' /> */}
             <Route component={NotFoundPage} />
           </Switch>
           <Footer />
