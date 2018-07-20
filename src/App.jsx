@@ -54,8 +54,8 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Route path={process.env.PUBLIC_URL + '/'} render={({location}) => <div className="App">
+      <Router basename={process.env.PUBLIC_URL}>
+        <Route render={({location}) => <div className="App">
           <header className={`App-header ${this.state.top ? 'Top' : ''}`}>
             <Tab ref={tab => this.tabs = tab} updateTop={this.updateTop.bind(this)} />
           </header>
