@@ -4,7 +4,7 @@ import './banner.css';
 
 class Banner extends Component {
   render() {
-    const {icon, title, subtitle, buttonText} = this.props;
+    const {icon, title, subtitle, buttonText, link} = this.props;
     return (
       <div className="Banner-container">
         <div className="Left-container">
@@ -20,7 +20,7 @@ class Banner extends Component {
             </div>
           </div>
         </div>
-        <button type="button" className="Download-button">{buttonText ? buttonText : 'Get'}</button>
+        <a href={link} target="_blank" rel="noopener noreferrer" className="Download-button">{buttonText ? buttonText : 'Get'}</a>
       </div>
     );
   }
