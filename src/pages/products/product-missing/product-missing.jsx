@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
-import './whalesper.css';
+import './product-missing.css';
 import Banner from '../../../components/banner/banner';
 import Background from '../../../components/background/background';
 
-class WhalesperPage extends Component {
+class ProductMissingPage extends Component {
 
   componentDidMount() {
-    document.title = 'Whalesper | Products | Whalesper Technology Inc.';
-    window.scrollTo({top: 0, behavior:'smooth'});
+    document.title = 'Oops..didn\'t find that | Products | Whalesper Technology Inc.';
   }
 
   render() {
@@ -44,4 +43,4 @@ class WhalesperPage extends Component {
 
 }
 
-export default WhalesperPage;
+export default ProductMissingPage;

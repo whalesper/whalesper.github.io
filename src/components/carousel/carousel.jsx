@@ -94,7 +94,8 @@ class Carousel extends Component {
 
   _renderIndicator(data) {
     return (
-      <button
+      <button type="button"
+        title={`Go to ${data.index}`}
         className={`Carousel-indicator ${data.index === this.state.currentIndex ? 'active' : ''}`}
         key={data.index}
         onClick={() => this.goTo(data.index)}>
@@ -187,10 +188,10 @@ class Carousel extends Component {
         <div className="Carousel-gallery">
           {this._renderIndicators()}
           <div className="Carousel-arrows">
-            <button className="Carousel-arrow" onClick={() => this.goTo(this.state.currentIndex - 1)}>
+            <button type="button" title={'Go to previous'} className="Carousel-arrow" onClick={() => this.goTo(this.state.currentIndex - 1)}>
               <FontAwesomeIcon icon="chevron-left" />
             </button>
-            <button className="Carousel-arrow" onClick={() => this.goTo(this.state.currentIndex + 1)}>
+            <button type="button" title={'Go to next'} className="Carousel-arrow" onClick={() => this.goTo(this.state.currentIndex + 1)}>
               <FontAwesomeIcon icon="chevron-right" />
             </button>
           </div>

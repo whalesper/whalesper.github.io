@@ -2,24 +2,33 @@ import React, { Component } from 'react';
 import './products.css';
 import Background from '../../components/background/background';
 import { Link } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 
 class ProductsPage extends Component {
 
   componentDidMount() {
     document.title = 'Products | Whalesper Technology Inc.';
+
   }
 
   render() {
+    const { productName } = this.props;
     return <div>
       <Background
         src={require('../../assets/tyler-franta-589346-unsplash.jpg')}
       />
       <div className='Image-overlay'>
         <h1 className='Title-primary Text-white Text-center'>
-          When innovation meets technology
+          {productName ? `Oops, couldn't find the name ${productName}` : 'When innovation meets technology'}
         </h1>
       </div>
       <div className='App-content'>
+        {productName ? <h2 className="Title-secondary Text-center">
+          {'That\'s a nice name...but we didn\'t make it'}
+        </h2> : null}
+        {productName ? <p className="Body Text-center Opacity-50">
+          If you were looking for our products, maybe you meant one of these:
+        </p> : null}
         <div className='App-card-wrapper'>
           <Link to='/products/whalesper' className='App-card-container Whalesper'>
             <div className='App-card'>
@@ -49,5 +58,9 @@ class ProductsPage extends Component {
   }
 
 }
+
+ProductsPage.propTypes = {
+  productName: PropTypes.string,
+};
 
 export default ProductsPage;

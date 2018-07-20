@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 
@@ -15,6 +15,7 @@ import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp, faLocationAr
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 import IitPage from './pages/products/iit/iit';
+import NotFoundPage from './pages/notfound/notfound';
 
 library.add(
   faChevronLeft,
@@ -47,35 +48,30 @@ class App extends Component {
   }
 
   updateTop(top) {
-    this.setState({top: top});
+    this.setState({ top: top });
   }
 
   render() {
     return (
       <Router>
-        <Route render={({ location }) => (
-          // <Spring
-          // config={config.slow}
-          // toggle={this.state.loaded}
-          //   from={{ opacity: 1, transform: 'translate3d(0%,10%,0)' }}
-          //   to={{ opacity: 1, transform: 'translate3d(0%,0,0)' }}>
-          // {style => 
-          <div className="App">
-            <header className={`App-header ${this.state.top ? 'Top' : ''}`}>
-              <Tab ref={tab => this.tabs = tab} updateTop={this.updateTop.bind(this)}/>
-            </header>
-            <Switch location={location}>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/products" component={ProductsPage} />
-              <Route exact path="/products/whalesper" component={WhalesperPage} />
-              <Route exact path="/products/iit" component={IitPage} />
-              <Route path="/events" component={EventPage} />
-              <Route path="/about" component={AboutPage} />
-            </Switch>
-            <Footer />
-          </div>
-          // } </Spring>
-        )} />
+        <Route render={({location}) => <div className="App">
+          <header className={`App-header ${this.state.top ? 'Top' : ''}`}>
+            <Tab ref={tab => this.tabs = tab} updateTop={this.updateTop.bind(this)} />
+          </header>
+          <Switch location={location}>
+            <Route exact path="/home" component={HomePage} />
+            <Route exact path="/products" component={ProductsPage} />
+            <Route exact path="/products/whalesper" component={WhalesperPage} />
+            <Route exact path="/products/iit" component={IitPage} />
+            <Route exact path="/products/:product" component={({ match }) => <ProductsPage productName={match.params.product}></ProductsPage>} />
+            <Route path="/events" component={EventPage} />
+            <Route path="/about" component={AboutPage} />
+            <Redirect from='/' to='/home' />
+            <Route component={NotFoundPage} />
+          </Switch>
+          <Footer />
+        </div>}/>
+        
       </Router>
     );
   }

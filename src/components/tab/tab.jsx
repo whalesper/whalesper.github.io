@@ -14,19 +14,19 @@ const initialState = {
     {
       index: 0,
       title: 'Home',
-      link: '/'
+      link: '/home'
     }, {
       index: 1,
       title: 'Events',
-      link: 'events'
+      link: '/events'
     }, {
       index: 2,
       title: 'Products',
-      link: 'products'
+      link: '/products'
     }, {
       index: 3,
       title: 'About Us',
-      link: 'about'
+      link: '/about'
     }],
   displayTabs: [],
   top: true
@@ -105,7 +105,7 @@ class Tab extends Component {
     return (
       <div className={`Tab-container ${this.state.top ? 'Top' : ''}`}>
         <NavLink className={`Top-logo-container ${this.state.top ? 'Top' : ''}`} to="/">
-          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.79 49.43">
+          <svg id="Layer_1" alt='whalesper logo' data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61.79 49.43">
             <path className="cls-1" d="M972.77,522.07a19.1,19.1,0,0,1-9.17-2.17c-2.63-1.44-2.84-3.12-6.22-4.81a18.31,18.31,0,0,0-14.17-.67,23,23,0,0,0-13.71,29.44A28.71,28.71,0,0,0,966.3,561a35.88,35.88,0,0,0,21.58-45.53A20.44,20.44,0,0,1,972.77,522.07Z" transform="translate(-928.11 -513.3)"/>
           </svg> Whalesper
         </NavLink>

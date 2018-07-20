@@ -22,6 +22,7 @@ class IitPage extends Component {
 
   componentDidMount() {
     document.title = 'iit | Products | Whalesper Technology Inc.';
+    window.scrollTo({top: 0, behavior:'smooth'});
   }
 
   render() {

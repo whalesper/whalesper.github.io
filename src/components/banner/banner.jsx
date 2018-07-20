@@ -20,7 +20,7 @@ class Banner extends Component {
             </div>
           </div>
         </div>
-        <button className="Download-button">{buttonText ? buttonText : 'Get'}</button>
+        <button type="button" className="Download-button">{buttonText ? buttonText : 'Get'}</button>
       </div>
     );
   }
