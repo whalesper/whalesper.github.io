@@ -25,6 +25,7 @@
       var segmentCount = 0;
       var l = window.location;
       // const nonHomeUrls = ['/snap-ninja', '/Headcount', '/comp-3', '/Centipede'];
+      const nonHomeUrls = [];
         for (let i = 0; i < nonHomeUrls.length; i++) {
           const urlRegex = new RegExp(nonHomeUrls[i], 'i');
           const verifyUrl = urlRegex.test(l.pathname);
