@@ -5,5 +5,5 @@
 
 # production 
 - `docker build -t whalesper -f Dockerfile.prod .`
-- `docker run -d --name whalesper -p 3000:80 whalesper`
+- `docker run -d --name whalesper -p 80:80 whalesper`
 
