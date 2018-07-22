@@ -5,9 +5,11 @@ class Post extends Component {
   render() {
     return (
       <div className="Container">
-        <div className="Title">
-          Show me your food
-        </div>
+        <a id='event-1'>
+          <h2 className="Title-secondary Text-left">
+            Show me your food
+          </h2>
+        </a>
         <div className="Meta-info">
           <div className="Date">
             2018 / 07 / 17   
@@ -18,7 +20,7 @@ class Post extends Component {
             Whalesper Technology Inc
           </div>
         </div>
-        <div className="Post-body">
+        <article className="Post-body">
           Start a food photography competition with us for free and let world know your delicious looking food!<br />
           During 3 day’s period, our platform will hold photo scoring server for your retaurant. Users need to do following steps to participate in the competition:<br />
           <ul>
@@ -26,7 +28,7 @@ class Post extends Component {
             <li>Share the result and compete with your friends in any existing social media.</li>
             <li>Winners on the day can get special award from our application/ your restaurants</li>
           </ul>
-        </div>
+        </article>
       </div>
     );
   }

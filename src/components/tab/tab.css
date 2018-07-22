@@ -1,14 +1,14 @@
 .Tab-container {
-  margin: 40px 0px 40px 0px;
+  margin: 40px auto;
   width: 61.8%;
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+  /* margin: auto; */
 
 }
 
 .Selected-tab {
-  font-size: 24px;
   font-weight: bolder;
 }
 
@@ -18,11 +18,41 @@
   flex-direction: row;
   display: flex;
   align-items: center;
+  transition: ease-in-out 0.5s;
+  color: black;
+}
+
+.Top-logo-container:active {
+  color: #666;
+}
+
+.Top-logo-container:visited {
+  color: initial;
+}
+
+/* .Top-logo-container svg .cls-1 {
+  fill: white
+} */
+
+.Top-logo-container:active {
+  color: #666;
+}
+
+.Top-logo-container.Top {
+  color: white;
 }
 
 .Top-logo-container svg {
-  fill: black
+  margin-right: 12px;
+  height: 24px;
+  fill: black;
+  transition: ease-in-out 0.5s;
 }
+
+.Top-logo-container.Top svg {
+  fill: white
+}
+
 
 .Tabs {
   display: flex;
@@ -33,16 +63,37 @@
 
 .Tab {
   font-size: 24px;
-  font-weight: bolder;
+  font-weight: normal;
   color: #aaa;
   cursor: pointer;
-  transition: ease-in-out 0.5s;
-  margin-left: 20px;
+  transition: ease-in-out 0.2s;
+  margin-left: 24px;
+  opacity: 0.6;
+}
+
+.Tab.Top {
+  color: white;
 }
 
 
+.Tab.active {
+  /* font-size: 24px; */
+  /* font-weight: bolder; */
+  opacity: 1;
+  /* color: black;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  margin-left: 20px; */
+}
+
+
+
 .Tab:hover {
-  color: #666;
+  opacity: 1;
+}
+
+.Tab.Top:hover {
+  opacity: 1;
 }
 
 .Logo {
@@ -50,22 +101,93 @@
   margin-right: 12px;
 }
 
-@media screen and (max-width: 800px) {
+.Tab-chevron {
+  transition: ease-in-out 0.5s;
+}
+
+.Tab-chevron.Collapsed {
+  transform: rotate(180deg);
+}
+
+.Tab-chevron.Top {
+  color: white;
+}
+
+.Tab-toggle {
+  font-size: 24px;
+  font-weight: normal;
+  color: #666;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  margin-left: 20px;
+  /* display: inline; */
+  /* display: flex; */
+}
+
+.Tab-toggle-text.Top {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
   .Tab-container {
-    margin: 20px 0px 20px 0px;
-    max-width: 800px;
+    margin: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: flex-start;
+    flex-direction:row;
+    justify-content: space-between;
+    transition: ease-in-out 0.2s, height 0.5s;
+    /* -webkit-transition: ease-in-out 0.2s;  */
+  }
+
+  .Top-logo-container {
+    font-size: 21px;
+    font-weight: bolder;
+    flex-direction: row;
     display: flex;
     align-items: center;
-    flex-direction:column;
-    justify-content: space-between
+  }
+
+  .Logo {
+    height: 21px;
+    margin-right: 12px;
   }
 
   .Tabs {
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin: 20px 0;
-    width: 100%;
-    justify-content: space-evenly
+    margin: 0;
+    /* width: 100%; */
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition: ease-in-out 0.2s, height 0.5s;
+  }
+
+  .Tab {
+    margin: 20px 0 0 0;
+    transition: ease-in-out 0.2s;
+    /* transition-delay: 0.2s; */
+    font-size: 21px
+  }
+
+  .Tab-toggle {
+    font-size: 21px;
+  }
+  
+
+  .Top-logo-container.Top {
+    color: white;
+  }
+  
+  .Top-logo-container svg {
+    margin-right: 8px;
+    height: 21px;
+    fill: black;
+    transition: ease-in-out 0.5s;
+  }
+  
+  .Top-logo-container.Top svg {
+    fill: white
   }
 }

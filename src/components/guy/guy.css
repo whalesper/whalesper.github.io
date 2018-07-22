@@ -9,6 +9,7 @@
   flex-direction: row;
   /* max-width: 61.8%; */
   margin: 20px auto;
+  width: 420px;
   /* background: #a1a */
 }
 
@@ -22,7 +23,7 @@
 
 .Guy-info {
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   /* background: #1a1 */
@@ -51,7 +52,22 @@
   color: #aaa
 }
 
-@media screen and (max-width: 800px) {
+.Guy-social {
+  font-size: 32px;
+  color: #aaa;
+  margin-right: 24px
+}
+
+.Guy-social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  /* width: 100%; */
+}
+
+@media screen and (max-width: 768px) {
 
   .Guy-photo {
     margin-right: 0px;
@@ -66,5 +82,25 @@
     justify-content: center;
     align-items: center;
     /* background: #a1a */
+    width: auto;
+  }
+
+  .Guy-info {
+    justify-content: center;
+    align-items: center;
+    /* background: #1a1 */
+  }
+
+  .Guy-social {
+    font-size: 32px;
+    color: #aaa;
+    margin-right: 0;
+  }
+
+  .Guy-social-container {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
   }
 }

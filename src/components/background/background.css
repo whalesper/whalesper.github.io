@@ -15,7 +15,7 @@
   top: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .Slideshow-container {
     min-width: 100%;
     /* height: 50%; */

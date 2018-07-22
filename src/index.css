@@ -8,3 +8,128 @@ body {
 * {
   text-decoration: none;
 }
+
+.Link {
+  color: #2796D0;
+}
+
+.Link:hover {
+  cursor: pointer;
+}
+
+.Title-primary {
+  font-size: 56px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.Title-secondary {
+  font-size: 27px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.Body {
+  font-size: 21px;
+  line-height: 33px;
+  margin-bottom: 24px;
+  font-weight: normal;
+  color: #999
+}
+
+.Text-bold {
+  font-weight: bold;
+}
+
+.Opacity-50 {
+  opacity: 0.5;
+}
+
+.Opacity-25 {
+  opacity: 0.25;
+}
+
+
+.Text-white {
+  color: white;
+}
+
+.Text-left {
+  text-align: left;
+}
+
+.Text-center {
+  text-align: center;
+}
+
+.No-margin {
+  margin: 0;
+}
+
+
+.Width-golden {
+  width: 61.8%;
+  /* margin:  auto; */
+}
+
+.Paragraph-container {
+  width: 61.8%;
+  margin:  auto;
+}
+
+.Row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .Title-primary {
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  
+  .Title-secondary {
+    font-size: 19px;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  
+  .Body {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+  
+  .Text-bold {
+    font-weight: bold;
+  }
+
+  .Text-smaller {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .Opacity-50 {
+    opacity: 0.5;
+  }
+  
+  .Text-white {
+    color: white;
+  }
+  
+  .Width-golden {
+    width: calc(100% - 40px);
+  }
+
+  .Paragraph-container {
+    width: 100%;
+  }
+
+  .No-margin {
+    margin: 0;
+  }
+  
+}
