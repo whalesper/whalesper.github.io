@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import './banner.css';
-import logo from '../../assets/iit@3x.svg';
 
 class Banner extends Component {
   render() {
+    const {icon, title, subtitle, buttonText, link} = this.props;
     return (
       <div className="Banner-container">
         <div className="Left-container">
-        <div className="Logo-container">
-          <img className="Logo" src={require('../../assets/iit@3x.svg')} alt=""/>
-        </div>
-        <div className="Text-container">
-          <div className="Title-primary">
-            iit
+          <div className="Logo-container">
+            <img className="App-download-logo" src={icon} alt={`${title} app logo`} />
           </div>
-          <div className="Title-secondary">
-          Download and start your new journey of food
+          <div className="Text-container">
+            <h1 className="Title-primary No-margin">
+              {title}
+            </h1>
+            <div className="Body Text-smaller  No-margin Banner-text-secondary">
+              {subtitle}
+            </div>
           </div>
         </div>
-        </div>
-        <button className="Download-button">Get</button>
+        <a href={link} target="_blank" rel="noopener noreferrer" className="Download-button">{buttonText ? buttonText : 'Get'}</a>
       </div>
     );
   }
 }
+
+Banner.propTypes = {
+  icon: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  buttonText: PropTypes.string
+};
 
 export default Banner;

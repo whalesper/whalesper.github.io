@@ -1,0 +1,136 @@
+.Footer-container {
+  color: #aaa;
+  font-size: 16px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer-column-wrapper {
+  padding: 50px 0;
+  border-top: 1px solid #eee;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 50px; */
+  width: 61.8%;
+}
+
+.Footer-bottom-row {
+  padding: 50px 0;
+  border-top: 1px solid #eee;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 50px; */
+  width: 61.8%;
+}
+
+.Footer-column {
+  width: 25%;
+  display: flex;
+  /* background: red; */
+  min-height: 100px;
+  /* border-right: 1px solid #eee; */
+  text-align: left;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.Footer-column-title {
+  font-weight: bolder;
+  color: #333;
+  /* background: #aaa; */
+}
+
+.Footer-column-list {
+  text-align: left;
+  padding: 0;
+}
+
+.Footer-column-item {
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.Footer-grid-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.Footer-grid {
+  height: 500px;
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer-grid-title-primary {
+  font-size: 48px;
+  font-weight: bolder;
+  color: #fff
+}
+
+.Footer-grid-title-secondary {
+  font-size: 24px;
+  /* font-weight: bold; */
+  color: #fff;
+  opacity: 0.5;
+}
+.Footer-grid-background {
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.8)
+}
+
+a {
+  color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .Footer-container {
+    /* padding: 50px 0px; */
+    color: #aaa;
+    font-size: 12px;
+    background: #fff;
+  }
+
+  .Footer-column-wrapper {
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 50px; */
+    width: calc(100% - 40px);
+  }
+
+  .Footer-column {
+    width: 100%;
+    display: flex;
+    /* background: red; */
+    min-height: initial;
+    /* border-right: 1px solid #eee; */
+    text-align: left;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .Footer-bottom-row {
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 50px; */
+    width: calc(100% - 40px);
+  }
+}
