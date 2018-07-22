@@ -38,25 +38,25 @@ class Footer extends Component {
         </div> */}
         <div className="Footer-column-wrapper">
           <div className="Footer-column">
-            <Link to='./events' className="Footer-column-title">
+            <Link to='/events' className="Footer-column-title">
               Events
             </Link>
             <ul className="Footer-column-list">
               <li className="Footer-column-item">
-                <Link to='./events#event-1' >Show me your food</Link>
+                <Link to='/events#event-1' >Show me your food</Link>
               </li>
             </ul>
           </div>
           <div className="Footer-column">
-            <Link to='./products' className="Footer-column-title">
+            <Link to='/products' className="Footer-column-title">
               Products
             </Link>
             <ul className="Footer-column-list">
               <li className="Footer-column-item">
-                <Link to='./products/whalesper'>Whalesper</Link>
+                <Link to='/products/whalesper'>Whalesper</Link>
               </li>
               <li className="Footer-column-item">
-                <Link to='./products/iit'>iit</Link>
+                <Link to='/products/iit'>iit</Link>
               </li>
             </ul>
           </div>
@@ -71,15 +71,15 @@ class Footer extends Component {
             </ul>
           </div>
           <div className="Footer-column">
-            <Link to='./about' className="Footer-column-title">
+            <Link to='/about' className="Footer-column-title">
               About us
             </Link>
             <ul className="Footer-column-list">
               <li className="Footer-column-item">
-                <Link to='./about#team'>Team Whalesper</Link>
+                <Link to='/about#team'>Team Whalesper</Link>
               </li>
               <li className="Footer-column-item">
-                <Link to='./about#contact'>Contact</Link>
+                <Link to='/about#contact'>Contact</Link>
               </li>
             </ul>
           </div>
