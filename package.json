@@ -3,25 +3,25 @@
   "version": "1.0.1",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
-    "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
-    "@fortawesome/free-regular-svg-icons": "^5.1.0-11",
-    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-regular-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "0.1.0-11",
-    "ajv": "^6.5.2",
+    "ajv": "^6.10.0",
     "i": "^0.3.6",
-    "npm": "^6.1.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-device-detect": "^1.5.8",
-    "react-dom": "^16.4.1",
-    "react-ga": "^2.5.3",
+    "npm": "^6.8.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-device-detect": "^1.6.2",
+    "react-dom": "^16.8.3",
+    "react-ga": "^2.5.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-router-hash-link": "^1.2.0",
+    "react-router-hash-link": "^1.2.1",
     "react-scripts": "1.1.4",
     "react-spring": "^5.4.0",
-    "react-transition-group": "^2.4.0"
+    "react-transition-group": "^2.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,10 +32,10 @@
     "deploy": "gh-pages -d build -b master"
   },
   "devDependencies": {
-    "eslint": "^5.1.0",
-    "eslint-plugin-react": "^7.10.0",
+    "eslint": "^5.15.1",
+    "eslint-plugin-react": "^7.12.4",
     "gh-pages": "^1.2.0",
-    "react-a11y": "^1.0.0"
+    "react-a11y": "^1.1.0"
   },
   "homepage": "http://whalesper.co"
 }
