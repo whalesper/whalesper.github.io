@@ -9,7 +9,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "0.1.0-11",
     "ajv": "^6.10.0",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "npm": "^6.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
